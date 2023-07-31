@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://abdurashid.com</id>
+    <title>Abdurashid Akbarov blog</title>
+    <updated>2023-07-31T04:44:10.765Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>Abdurashid Abarov</name>
+        <email>abdurashid@outlook.com</email>
+        <uri>https://abdurashid.com</uri>
+    </author>
+    <link rel="alternate" href="https://abdurashid.com"/>
+    <link rel="self" href="https://abdurashid.com/rss/atom.xml"/>
+    <logo>https://abdurashid.com/favicon.png</logo>
+    <icon>https://abdurashid.com/favicon.png</icon>
+    <rights>All rights reserved 2023, Abdurashid Akbarov</rights>
+    <entry>
+        <title type="html"><![CDATA[What is Markdown?]]></title>
+        <id>https://abdurashid.com/chatgpt-content-generation</id>
+        <link href="https://abdurashid.com/chatgpt-content-generation"/>
+        <updated>2023-03-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[An alternative way to style a text document for readability and portability.]]></summary>
+        <content type="html"><![CDATA[An alternative way to style a text document for readability and portability.]]></content>
+        <author>
+            <name>Abdurashid Abarov</name>
+            <email>abdurashid@outlook.com</email>
+            <uri>https://abdurashid.com</uri>
+        </author>
+        <contributor>
+            <name>Abdurashid Abarov</name>
+            <email>abdurashid@outlook.com</email>
+            <uri>https://abdurashid.com</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to reduce decision fatigue as a digital nomad]]></title>
+        <id>https://abdurashid.com/reduce-decision-fatigue-digital-nomad</id>
+        <link href="https://abdurashid.com/reduce-decision-fatigue-digital-nomad"/>
+        <updated>2023-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to optimize decision making on your next workation. Sharing my experience after living in more than 8 countries.]]></summary>
+        <content type="html"><![CDATA[How to optimize decision making on your next workation. Sharing my experience after living in more than 8 countries.]]></content>
+        <author>
+            <name>Abdurashid Abarov</name>
+            <email>abdurashid@outlook.com</email>
+            <uri>https://abdurashid.com</uri>
+        </author>
+        <contributor>
+            <name>Abdurashid Abarov</name>
+            <email>abdurashid@outlook.com</email>
+            <uri>https://abdurashid.com</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[From VSCode to Neovim, is it worth it?]]></title>
+        <id>https://abdurashid.com/from-vscode-to-neovim</id>
+        <link href="https://abdurashid.com/from-vscode-to-neovim"/>
+        <updated>2023-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Trying out Vim is something every Software Engineer should do at some point, however when it comes to replacing your VSCode or your favorite IDE it is not that simple.]]></summary>
+        <content type="html"><![CDATA[Trying out Vim is something every Software Engineer should do at some point, however when it comes to replacing your VSCode or your favorite IDE it is not that simple.]]></content>
+        <author>
+            <name>Abdurashid Abarov</name>
+            <email>abdurashid@outlook.com</email>
+            <uri>https://abdurashid.com</uri>
+        </author>
+        <contributor>
+            <name>Abdurashid Abarov</name>
+            <email>abdurashid@outlook.com</email>
+            <uri>https://abdurashid.com</uri>
+        </contributor>
+    </entry>
+</feed>
