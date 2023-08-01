@@ -5,28 +5,18 @@ export default function Footer() {
   const links = [
     {
       title: "Source",
-      url: "https://github.com/halafi/filiphalas.com",
+      url: "https://github.com/abdurshd/portfolio",
       icon: "ri-braces-line",
     },
     {
       title: "GitHub",
-      url: "https://github.com/halafi",
+      url: "https://github.com/abdurshd",
       icon: "ri-github-line",
     },
-    // {
-    //   title: "GitLab",
-    //   url: "https://gitlab.com/halafi",
-    //   icon: "ri-gitlab-line",
-    // },
     {
       title: "linkedin",
-      url: "https://www.linkedin.com/in/filip-halas-a7928476/",
+      url: "https://www.linkedin.com/in/abdurshd",
       icon: "ri-linkedin-line",
-    },
-    {
-      title: "StackOverflow",
-      url: "https://stackoverflow.com/users/4227313/halafi",
-      icon: "ri-stack-overflow-line",
     },
   ];
 
