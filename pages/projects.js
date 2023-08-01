@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ["Elder.js", "dotfiles", "Minesweeper", "Gomatch"];
+    const featured = ["Doston-Law", "House Bazaar", "Github Search", "Portfolio"];
 
     return items
       .map((item) => {
@@ -75,8 +75,8 @@ function Projects(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.com/projects" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.com/projects" />
+        <meta content="https://abdurashid.tech/projects" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.tech/projects" />
       </Head>
 
       <AnimateSharedLayout>

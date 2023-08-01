@@ -11,11 +11,11 @@ function Post(props) {
 
   const title = `${props.title} | Abdurashid Akbarov`
   const description = props.description || ''
-  const url = `https://abdurashid.com/${props.slug}`
+  const url = `https://abdurashid.tech/${props.slug}`
   const date = new Date(props.date).toISOString()
   const image = props.image
     ? `https://abdurashid.com${props.image}`
-    : 'https://abdurashid.com/static/images/home-opt.jpg'
+    : 'https://abdurashid.tech/static/images/home-opt.jpg'
 
   return (
     <>

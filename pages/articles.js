@@ -82,8 +82,8 @@ function Articles(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.com/articles" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.com/articles" />
+        <meta content="https://abdurashid.tech/articles" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.tech/articles" />
       </Head>
 
       <AnimateSharedLayout>

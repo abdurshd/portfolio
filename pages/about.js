@@ -115,8 +115,8 @@ function About(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.com/about" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.com/about" />
+        <meta content="https://abdurashid.tech/about" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.tech/about" />
       </Head>
 
       {renderIntro()}
