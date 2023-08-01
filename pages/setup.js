@@ -45,12 +45,14 @@ function Setup(props) {
                   <ul>
                     {item.projects.map((project, jIndex) => {
                       return (
+                        <>
                         <li key={jIndex}>
                           <Link href={project.projectUrl} target="_blank">
                             {project.projectTitle}
                           </Link>
-                          
                         </li>
+                        {item.projects.indexOf(project) === item.projects.length-1 && <br/>}
+                        </>
                       );
                     })}
                   </ul>
@@ -74,8 +76,8 @@ function Setup(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.com/setup" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.com/setup" />
+        <meta content="https://abdurashid.tech/setup" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.tech/setup" />
       </Head>
 
       <p dangerouslySetInnerHTML={{ __html: description }} />

@@ -30,7 +30,7 @@ export async function getStaticProps() {
     props: {
       title: "Articles | Abdurashid Abarov",
       tagline: "Articles",
-      primaryColor: "pink",
+      primaryColor: "purple",
       secondaryColor: "red",
       featuredPosts,
       allPosts,
