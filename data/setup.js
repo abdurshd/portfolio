@@ -105,6 +105,12 @@ const categories = [
           
         ],
       },
+      {
+        title: "HTML, CSS, Bootstrap, DaisyUI, Redux, NextAuth.Js, Git, Github. ",
+        description:
+          "",
+        url: "",
+      },
     ],
   },
   {
