@@ -3,7 +3,7 @@ title: "What is Markdown?"
 description: "An alternative way to style a text document for readability and portability."
 image: /static/img/posts/robots-using-computer.jpg
 date: "2023-03-17"
-canonical_url: https://filiphalas.com/chatgpt-content-generation
+canonical_url: https://abdurashid.tech/chatgpt-content-generation
 ---
 
 ## Introduction

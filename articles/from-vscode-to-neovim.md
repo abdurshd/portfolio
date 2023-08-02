@@ -3,7 +3,7 @@ title: "From VSCode to Neovim, is it worth it?"
 description: "Trying out Vim is something every Software Engineer should do at some point, however when it comes to replacing your VSCode or your favorite IDE it is not that simple."
 image: /static/img/posts/neovim.jpg
 date: "2023-02-16"
-canonical_url: https://filiphalas.com/from-vscode-to-neovim
+canonical_url: https://abdurashid.tech/from-vscode-to-neovim
 ---
 
 My journey with text editors and IDEs that I have been using primarily for web development dates back to WebStorm, followed by VSCode, resulting with using Neovim as my primary code editor at the moment. Yet if anyone asks me whether they should switch to Neovim I tend to discourage them, despite never imagining myself to go back to an IDE without near perfect Vim integration.
@@ -96,11 +96,12 @@ Plus you will save all that money not having to worry about mouse anymore.
 
 If you end up getting a keyboard with a compact key layout you might suddenly notice you have no arrow keys. Don't panic.
 
-Moving your hand from hjkl was a waste of time anyway, just use [Karabiner](https://karabiner-elements.pqrs.org/) with some [modification rule](https://ke-complex-modifications.pqrs.org/?q=hjkl). Same can be done for merged Esc and ~ key. Save yourself some trouble and use a declarative config file with [Goku](https://github.com/yqrashawn/GokuRakuJoudo). See my [dotfiles](https://github.com/halafi/dotfiles/blob/master/config/karabiner.edn) for example.
+Moving your hand from hjkl was a waste of time anyway, just use [Karabiner](https://karabiner-elements.pqrs.org/) with some [modification rule](https://ke-complex-modifications.pqrs.org/?q=hjkl). Same can be done for merged Esc and ~ key. Save yourself some trouble and use a declarative config file with [Goku](https://github.com/yqrashawn/GokuRakuJoudo). See my [dotfiles]for example.
 
 You can take it one step further and get a hardware programmable keyboard like ErgoDox EZ, but the advantage of programming your keyboard with software is that it will transfer to your laptop keyboard or any keyboard you will use as well.
 
 ## Conclusion
+
 The choice of developer tools is generally individual (unless your company enforces a particular tool), no matter what you use I would strive for being efficient. I have learned a lot trying out Vim and I think if your career is longer than 10 years it's worth giving it a shot. You can always go back to what you used before if you don't like it.
 
 <figure>
@@ -114,12 +115,5 @@ Once you are a Neovim user there is also a configuration overhead whenever you n
 ## Additional Resources
 
 Introduction video, books and resources I recommend to learn about Neovim and discover its ecosystem:
-
-- [Neovim in 100 Seconds](https://www.youtube.com/watch?v=c4OyfL5o7DU)
-- [Practical Vim, Second Edition](https://pragprog.com/titles/dnvim2/practical-vim-second-edition/)
-- [Modern Vim](https://pragprog.com/titles/modvim/modern-vim/)
-- [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
-- [Learn Neovim The Practical Way](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f)
-- [My dotfiles and Neovim config](https://github.com/halafi/dotfiles)
 
 Thank you for reading this far, you deserve a cookie.

@@ -13,7 +13,7 @@ export async function getStaticProps() {
   const meta = {
     title: "About | Abdurashid Akbarov",
     description:
-      "Hi, I'm Abdurashid. I started coding with HTML and game development in elementary school and never stopped being passionate about software and technology. I'm from Czechia and currently workationing around East and Southeast Asia. I enjoy learning, building, problem solving, working on open source and side projects.",
+      "Hi, I'm Abdurashid. I started coding with HTML and game development in elementary school and never stopped being passionate about software and technology. I'm from Uzbekistan and currently in South Korea. I am super curious about everything and enjoy learning, building, problem solving.",
     tagline: "About Me",
     primaryColor: "cyan",
     secondaryColor: "purple",
@@ -29,6 +29,41 @@ function About(props) {
     return (
       <Container>
         <Section>
+          <Paragraph
+            css={{
+              marginTop: "16px",
+              "@bp2": { marginTop: "-6px" },
+            }}
+          >Hey there, thanks for dropping by!
+          <br/>
+            <strong> I'm Abdurashid. You may call me Ricky, too</strong> 
+          </Paragraph>
+          <Paragraph>
+          So, let me tell you my story. Picture this - it's <strong>2015</strong>, and I'm knee-deep in law school books, juggling case studies, statutes, and all sorts of lawyerly jargon. Then out of the blue, we have this <strong>'IT for Lawyers'</strong> class. And get this, we had to code. Yes, you read it right, code! Coding was like <strong>rocket science</strong> to me back then. It was exciting, yet a little terrifying. But you see, law was my jam, so programming took a backseat :/.
+          </Paragraph>
+          <Paragraph>
+          Fast forward to 2017,  I was doing my law school. One day, I stumbled upon an<strong> <a href='https://kun.uz/uz/news/2017/11/03/sunij-intellekt-londonning-eng-ahsi-uristlarini-ortda-koldirdi'>article</a></strong> that spun my world around. It was about an <strong>AI judge</strong> in the UK that apparently <strong>had a better judgment record</strong> than top 100 lawyers of London. Mind blown🤯, right?  
+          <br/>
+          That little nugget of information tickled my curiosity about all things IT and AI. I found myself gradually drawn into the world of <strong>Python</strong> and dabbling in data science with. Not long earlier, I was knee-deep in web development. And funny enough, I was enjoying it more than I'd ever enjoyed data science. So <strong>I sticked to web development.</strong>
+          </Paragraph>
+          <Paragraph>
+          One online course led to another, and soon, I was devouring tutorials, mastering HTML, CSS, JavaScript, you name it. Meanwhile, I was cutting my teeth on all sorts of web development projects, building awesome websites and web apps. My remotely—yet practically—applied skills were making steady progress, bit by bit, byte by byte (see what I did there?).
+          </Paragraph>
+          <Paragraph>
+          Now, I get that it might sound <strong>super cliché</strong>, but the truth? <strong>I genuinely want to leverage the power of programming to do some meaningful stuff.</strong> I want my code to make a difference, to have an impact. You see, for me, this journey from law to web development isn't just about career switches; it's about passion and fulfilment.
+          <br/>
+          So, that's my story. Just a lawyer-turned-web-developer trying to weave meaningful stories on the World Wide Web canvas, one line of code at a time. Who knew, right?
+          </Paragraph>
+        </Section>
+      </Container>
+    );
+  };
+
+  const renderAll = () => {
+    return items.map((item, index) => {
+      return (
+        <Container>
+        <Section>
           <Image
             alt="Abdurashid"
             src="/static/images/ricky.jpg"
@@ -39,33 +74,8 @@ function About(props) {
             priority
           />
         </Section>
-        <Section>
-          <Paragraph
-            css={{
-              marginTop: "16px",
-              "@bp2": { marginTop: "-6px" },
-            }}
-          >
-            <strong>Hi, I'm Abdurashid.</strong> I started coding with HTML at law school and never stopped being{" "}
-            <strong>passionate about software and technology</strong>.
-          </Paragraph>
-          <Paragraph>
-            I'm from Uzbekistan and currently{" "}
-            <strong>living South Korea</strong>.
-          </Paragraph>
-          <Paragraph>
-            <strong>I enjoy learning, building, problem solving</strong>,
-            experimenting different things.
-          </Paragraph>
-        </Section>
-      </Container>
-    );
-  };
-
-  const renderAll = () => {
-    return items.map((item, index) => {
-      return (
         <div style={{ marginBottom: 40 }} key={index}>
+        <h2>Career</h2>
           <h3>{item.jobTitle}</h3>
           <p style={{ margin: 0 }}>
             <a href={item.companyUrl} target="_blank">
@@ -85,6 +95,7 @@ function About(props) {
             <span>{getDuration(item.startDate, item.endDate)}</span>
           </p>
         </div>
+        </Container>
       );
     });
   };
@@ -119,10 +130,9 @@ function About(props) {
         <link rel="cannonical" href="https://abdurashid.tech/about" />
       </Head>
 
-      {renderIntro()}
-
-      <h2>Career</h2>
       {renderAll()}
+      <br/>
+      {renderIntro()}
     </>
   );
 }

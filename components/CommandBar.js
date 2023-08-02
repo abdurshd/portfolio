@@ -17,34 +17,6 @@ export default function CommandBar(props) {
 
   const actions = [
     {
-      id: "copy",
-      name: "Copy URL",
-      shortcut: ["u"],
-      keywords: "copy-url",
-      section: "General",
-      perform: () => navigator.clipboard.writeText(window.location.href),
-      icon: <i className="ri-file-copy-line" style={iconStyle} />,
-    },
-    {
-      id: "email",
-      name: "Send Email",
-      shortcut: ["e"],
-      keywords: "send-email",
-      section: "General",
-      perform: () => window.open("mailto:filip@filiphalas.com", "_blank"),
-      icon: <i className="ri-mail-line" style={iconStyle} />,
-    },
-    {
-      id: "source",
-      name: "View Source",
-      shortcut: ["s"],
-      keywords: "view-source",
-      section: "General",
-      perform: () =>
-        window.open("https://github.com/halafi/filiphalas.com", "_blank"),
-      icon: <i className="ri-braces-line" style={iconStyle} />,
-    },
-    {
       id: "home",
       name: "Home",
       shortcut: ["g", "h"],
@@ -90,12 +62,30 @@ export default function CommandBar(props) {
       icon: <i className="ri-computer-line" style={iconStyle} />,
     },
     {
+      id: "copy",
+      name: "Copy URL",
+      shortcut: ["u"],
+      keywords: "copy-url",
+      section: "General",
+      perform: () => navigator.clipboard.writeText(window.location.href),
+      icon: <i className="ri-file-copy-line" style={iconStyle} />,
+    },
+    {
+      id: "email",
+      name: "Send Email",
+      shortcut: ["e"],
+      keywords: "send-email",
+      section: "General",
+      perform: () => window.open("mailto:abdurashid@outlook.com", "_blank"),
+      icon: <i className="ri-mail-line" style={iconStyle} />,
+    },
+    {
       id: "github",
       name: "Github",
       shortcut: ["f", "g"],
       keywords: "go-github",
       section: "Follow",
-      perform: () => window.open("https://github.com/halafi", "_blank"),
+      perform: () => window.open("https://github.com/abdurshd", "_blank"),
       icon: <i className="ri-github-line" style={iconStyle} />,
     },
     {
@@ -106,7 +96,7 @@ export default function CommandBar(props) {
       section: "Follow",
       perform: () =>
         window.open(
-          "https://www.linkedin.com/in/filip-halas-a7928476/",
+          "https://www.linkedin.com/in/abdurshd/",
           "_blank"
         ),
       icon: <i className="ri-linkedin-line" style={iconStyle} />,
