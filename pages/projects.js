@@ -11,7 +11,7 @@ import Link from "next/link";
 export async function getStaticProps() {
   const meta = {
     title: "Projects | Abdurashid Abarov",
-    tagline: "Open Source Projects",
+    tagline: "Public Projects",
     primaryColor: 'purple',
     secondaryColor: 'green',
   };
