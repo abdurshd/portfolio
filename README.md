@@ -2,8 +2,6 @@
 
 This is personal portfolio project and can be seen in <https://abdurashid.tech>
 
-
-
 ## Running locally
 
 Run locally:
