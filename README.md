@@ -1,8 +1,8 @@
 # abdurashid.tech
 
-Can be seen in <https://abdurashid.tech>
+This is personal portfolio project and can be seen in <https://abdurashid.tech>
 
-Personal website
+
 
 ## Running locally
 
