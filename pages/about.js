@@ -151,7 +151,6 @@ const Paragraph = styled("p", {
 const Section = styled("div", {
   marginTop: "0px",
   width: "auto",
-  "@bp2": { width: "48%" },
 });
 
 About.Layout = Main;
