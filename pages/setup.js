@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import Head from "next/head";
 import Main from "../layouts/Main";
 import stripHtml from "../lib/strip-html";
 import categories from "../data/setup";
 import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
+
 
 export async function getStaticProps() {
   const meta = {
     title: "Setup & Skills | Abdurashid Abarov",
-    description: "Softwares, Frameworks and Hardwares I have experience(d)",
+    description: "Softwares, Frameworks and Hardwares I use(d)",
     tagline: "Skills & Setup ",
     primaryColor: 'cyan',
     secondaryColor: 'pink',
@@ -21,6 +23,8 @@ export async function getStaticProps() {
 
 function Setup(props) {
   const { title, description } = props;
+  const [isHovered, setIsHovered] = useState('');
+
 
   const renderAll = () => {
     return categories.map((category, index) => {
@@ -47,9 +51,14 @@ function Setup(props) {
                       return (
                         <>
                         <li key={jIndex}>
-                          <Link href={project.projectUrl} target="_blank">
+                          <a href={project.projectUrl} target="_blank"
+                           onMouseEnter={() => setIsHovered(project.projectTitle)}
+                           onMouseLeave={() => setIsHovered('')}
+                           >
+                            <RoughNotation type="box" show={isHovered === project.projectTitle}>
                             {project.projectTitle}
-                          </Link>
+                            </RoughNotation>
+                          </a>
                         </li>
                         {item.projects.indexOf(project) === item.projects.length-1 && <br/>}
                         </>

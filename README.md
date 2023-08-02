@@ -1,8 +1,6 @@
-Can be seen in https://abdurashid.tech
-
 # abdurashid.tech
 
-
+Can be seen in <https://abdurashid.tech>
 
 Personal website
 

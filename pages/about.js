@@ -46,7 +46,7 @@ function About(props) {
               "@bp2": { marginTop: "-6px" },
             }}
           >
-            <strong>Hi, I'm Abdurashid.</strong> I started with HTML at law school (until that time I did not have computer) and never stopped being{" "}
+            <strong>Hi, I'm Abdurashid.</strong> I started coding with HTML at law school and never stopped being{" "}
             <strong>passionate about software and technology</strong>.
           </Paragraph>
           <Paragraph>

@@ -15,7 +15,7 @@ const categories = [
         url: "https://react.dev",
         projects: [
           {
-            projectTitle: `House Bazar`,
+            projectTitle: `House Bazaar`,
             projectUrl: 'https://github.com/abdurshd/house-bazaar'
           },
           {
@@ -71,10 +71,10 @@ const categories = [
         title: "Firebase",
         description:
           "is a comprehensive Google-backed development platform offering services like real-time database, authentication, cloud storage, analytics and hosting for web and mobile apps.",
-        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        url: "https://firebase.google.com/docs",
         projects: [
           {
-            projectTitle: `House Bazar`,
+            projectTitle: `House Bazaar (Firestore Database, Storage, Authentication)`,
             projectUrl: 'https://github.com/abdurshd/house-bazaar'
           },
         ],
@@ -106,7 +106,7 @@ const categories = [
         ],
       },
       {
-        title: "HTML, CSS, Bootstrap, DaisyUI, Redux, NextAuth.Js, Git, Github. ",
+        title: "HTML, CSS, Bootstrap, DaisyUI, Redux, NextAuth.Js, EJS, JQuery, Git, Github. ",
         description:
           "",
         url: "",

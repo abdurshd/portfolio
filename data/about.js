@@ -2,7 +2,7 @@ const items = [
   {
     jobTitle: "Front End Web Developer",
     company: "Freelancer",
-    companyUrl: "https://upwork.com/",
+    companyUrl: "",
     startDate: "2022-11-17",
     endDate: "",
     location: "remote",
