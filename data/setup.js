@@ -1,6 +1,6 @@
 const categories = [
   {
-    name: "Followings are the framework and programming tools I have experience:",
+    name: "Followings are the framework and programming tools I use(d):",
     items: [
       {
         title: "Javascript",
