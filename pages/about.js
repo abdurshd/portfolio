@@ -42,7 +42,8 @@ function About(props) {
           So, let me tell you my story. Picture this - it's <strong>2015</strong>, and I'm knee-deep in law school books, juggling case studies, statutes, and all sorts of lawyerly jargon. Then out of the blue, we have this <strong>'IT for Lawyers'</strong> class. And get this, we had to code. Yes, you read it right, code! Coding was like <strong>rocket science</strong> to me back then. It was exciting, yet a little terrifying. But you see, law was my jam, so programming took a backseat :/.
           </Paragraph>
           <Paragraph>
-          Fast forward to 2017,  I was doing my law school. One day, I stumbled upon an<strong> <a href='https://kun.uz/uz/news/2017/11/03/sunij-intellekt-londonning-eng-ahsi-uristlarini-ortda-koldirdi'>article</a></strong> that spun my world around. It was about an <strong>AI judge</strong> in the UK that apparently <strong>had a better judgment record</strong> than top 100 lawyers of London. Mind blown🤯, right?  
+          Fast forward to 2017,  I was doing my law school. One day, I stumbled upon an<strong> <a href='https://kun.uz/uz/news/2017/11/03/sunij-intellekt-londonning-eng-ahsi-uristlarini-ortda-koldirdi'>article</a></strong> that spun my world around. It was about an <strong>AI 'lawyer'</strong> in the UK that apparently <strong>had a better judgment record</strong> than top 100 lawyers of London. Mind blown🤯, right?
+          Don't forget it was 2017, long before than ChatGPT!
           <br/>
           That little nugget of information tickled my curiosity about all things IT and AI. I found myself gradually drawn into the world of <strong>Python</strong> and dabbling in data science with. Not long earlier, I was knee-deep in web development. And funny enough, I was enjoying it more than I'd ever enjoyed data science. So <strong>I sticked to web development.</strong>
           </Paragraph>
@@ -94,6 +95,9 @@ function About(props) {
             <span> • </span>
             <span>{getDuration(item.startDate, item.endDate)}</span>
           </p>
+          <br/>
+          <p style={{ margin: 0 }}> More information about my education, career and </p> 
+          <p style={{ margin: 0 }}>certificates can be seen on my <a href='https://www.linkedin.com/in/abdurshd'>LinkedIn</a></p>
         </div>
         </Container>
       );
