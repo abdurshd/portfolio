@@ -6,7 +6,7 @@ import {
   KBarAnimator,
   KBarProvider,
   KBarPortal,
-  useDeepMatches,
+  useMatches,
   KBarPositioner,
   KBarSearch,
   KBarResults,
@@ -35,12 +35,12 @@ export default function CommandBar(props) {
       icon: <i className="ri-user-line" style={iconStyle} />,
     },
     {
-      id: "articles",
-      name: "Articles",
+      id: "skills",
+      name: "Skills",
       shortcut: ["g", "a", "r"],
-      keywords: "go-articles",
+      keywords: "go-skills",
       section: "Go To",
-      perform: () => router.push("/articles"),
+      perform: () => router.push("/skills"),
       icon: <i className="ri-article-line" style={iconStyle} />,
     },
     {
@@ -120,7 +120,7 @@ export default function CommandBar(props) {
 }
 
 function RenderResults() {
-  const { results } = useDeepMatches();
+  const { results } = useMatches();
 
   return (
     <KBarResults
