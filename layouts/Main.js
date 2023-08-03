@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Wrapper } from "../components/Wrapper";
 import { PostMain, PostContent, PostContainer } from '../components/Post'
+import { RoughNotation } from "react-rough-notation";
+
 
 export default function Main({ children }) {
   const { title, tagline, primaryColor, secondaryColor } = children.props
@@ -30,7 +32,13 @@ export default function Main({ children }) {
               );`,
               }}
             >
+              <RoughNotation
+                type="underline"
+                color="white"
+                show
+                >
               {tagline ? tagline : title}
+              </RoughNotation>
             </GradientTitle>
             {children}
           </PostContainer>

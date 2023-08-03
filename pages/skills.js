@@ -35,13 +35,25 @@ function Skills(props) {
             {category.items.map((item, iIndex) => {
               return (
                 <li key={iIndex}>
-                  <Link href={item.url} target="_blank">
-                    {item.title}
-                  </Link>
-                  <span> - </span>
-                  <span
+                  {
+                    item.url ? 
+                    (
+                      <Link href={item.url} target="_blank">
+                        {item.title}
+                      </Link>
+                    ) :
+                    (<p style={{ color: 'white' }}>{item.title}</p>)
+                  }
+                  {
+                    item.url && <span> - </span>
+                  }
+                  {
+                    item.url && 
+                    (
+                    <span
                     dangerouslySetInnerHTML={{ __html: item.description }}
-                  />
+                    />
+                  )}
                   {item.projects && skillCategories.indexOf(category) === 0? 
                   (
                   <>

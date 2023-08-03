@@ -92,7 +92,7 @@ const skillCategories = [
           ],
         },
         {
-          title: "Tailwind",
+          title: "TailwindCSS",
           description:
             "is a highly customizable, utility-first framework designed for efficient, responsive web design and development.",
           url: "https://tailwindcss.com/docs/installation",
@@ -107,9 +107,6 @@ const skillCategories = [
         },
         {
           title: "HTML, CSS, Bootstrap, DaisyUI, Redux, NextAuth.Js, EJS, JQuery, Git, Github. ",
-          description:
-            "",
-          url: "",
         },
       ],
     },

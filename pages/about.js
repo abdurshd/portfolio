@@ -7,14 +7,12 @@ import Main from "../layouts/Main";
 import stripHtml from "../lib/strip-html";
 import items from "../data/about";
 
-// I'm currently helping startups grow as a <strong>Software Engineer</strong> at Capchase.
-
 export async function getStaticProps() {
   const meta = {
     title: "About | Abdurashid Akbarov",
     description:
       "Hi, I'm Abdurashid. I started coding with HTML and game development in elementary school and never stopped being passionate about software and technology. I'm from Uzbekistan and currently in South Korea. I am super curious about everything and enjoy learning, building, problem solving.",
-    tagline: "About Me",
+    tagline: "About me",
     primaryColor: "cyan",
     secondaryColor: "purple",
   };
