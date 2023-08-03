@@ -5,12 +5,14 @@ import Footer from "../components/Footer";
 import ShortcutHome from "../components/ShortcutHome";
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { Wrapper } from '../components/Wrapper'
+import { RoughNotation } from "react-rough-notation";
+
 
 export async function getStaticProps() {
 
   return {
     props: {
-      title: "Abdurashid Abarov",
+      title: "Abdurashid Akbarov",
       description: "Building state of the art web apps, static sites and tools",
       seoDescription: "Front End Web Developer. Building front end web apps (at the same time getting into the back end world), static sites and tools. Programming since 2015, getting paid for it since 2022",
     },
@@ -38,8 +40,23 @@ function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
+              <RoughNotation
+                type="circle"
+                color="cyan"
+                padding={10}
+                animationDuration={800}
+                show
+                >
                 <strong>React developer</strong><br />
+                </RoughNotation>
+                <RoughNotation
+                type="underline"
+                color="grey"
+                animationDuration={2800}
+                show
+                >
                 {description}
+                </RoughNotation>
               </p>
               <ShortcutHome />
             </div>
