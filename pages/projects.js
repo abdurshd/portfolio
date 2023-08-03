@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { styled } from '../stitches.config'
 import Head from "next/head";
 import { AnimateSharedLayout } from "framer-motion";
 import Main from "../layouts/Main";
@@ -6,7 +7,8 @@ import FeaturedProject from "../components/FeaturedProject";
 import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from "../lib/strip-html";
 import items from "../data/projects";
-import Link from "next/link";
+import { motion } from 'framer-motion'
+
 
 export async function getStaticProps() {
   const meta = {
@@ -47,13 +49,56 @@ function Projects(props) {
           <h3>{item.year}</h3>
           <ul>
             {item.projects.map((project, pIndex) => {
-              return <ProjectItem key={pIndex} project={project} />;
+              return <ProjectsDetailed key={pIndex} project={project} />;
             })}
           </ul>
         </div>
       );
     });
   };
+
+  function ProjectsDetailed(props) {
+    const {project, index} = props;
+    return (
+      <Article href={project.url}>
+        <Animation index={index}>
+          <Container>
+          <ImageContainer css={{ backgroundImage: `url(${project.image})` }} />
+            <Content>
+              <Title>{project.title}</Title>
+              <Description>{project.description}</Description>
+              <Description>{project.overallExpl}</Description>
+              <Description>{project.usedSkillsExpl}</Description>
+            </Content>
+          </Container>
+        </Animation>
+      </Article>
+    )
+  }
+  
+function Animation(props) {
+  const [hovered, setHovered] = useState('')
+  const isHovered = hovered === props.index
+
+  return (
+    <AnimContainer
+      onHoverStart={() => setHovered(props.index)}
+      onHoverEnd={() => setHovered('')}
+      className="featured-article-anim"
+    >
+      {isHovered && (
+        <AnimHovered
+          layoutId="featuredArticles"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
+      )}
+
+      {props.children}
+    </AnimContainer>
+  )
+}
 
   const getTotalProjects = () => {
     let total = 0;
@@ -66,7 +111,7 @@ function Projects(props) {
   };
 
   const { title } = props;
-  const description = `On this page you can find <strong>${getTotalProjects()} different</strong> open source apps and libraries I have built or contributed to over the course of my github career starting with udemy/codecademy projects.`;
+  const description = `On this page you can find <strong>${getTotalProjects()} different</strong> open source apps and libraries I have built or contributed to over the course of my career starting with udemy/codecademy projects.`;
 
   return (
     <div className="single">
@@ -86,23 +131,71 @@ function Projects(props) {
         <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
         <h2>All Projects</h2>
-        {renderAll()}
+          {renderAll()}
       </AnimateSharedLayout>
     </div>
   );
 }
 
-function ProjectItem(props) {
-  const { project } = props;
+const Article = styled('a', {
+  border: '0 !important',
+  width: '370px',
+  margin: '0 20px',
+  textDecoration: 'none',
+  '&:hover': { opacity: 1 },
+  '&:first-child': { marginLeft: 0 },
+})
 
-  return (
-    <li>
-      <Link href={project.url} target="_blank">
-        {project.title}
-      </Link>
-    </li>
-  );
-}
+const Container = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+})
+
+const ImageContainer = styled('div', {
+  borderRadius: '8px',
+  width: '370px',
+  height: '180px',
+  margin: '20px',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center center',
+})
+
+const Content = styled('div', {
+  maxWidth: '450px',
+  '@bp2': { maxWidth: '100%', marginRight: 0 },
+})
+
+const Title = styled('h3', {
+  color: '$primary',
+  margin: 0,
+})
+
+const Description = styled('p', {
+  color: '$secondary',
+  display: '-webkit-box',
+  margin: 0,
+  WebkitLineClamp: '2',
+  WebkitBoxOrient: 'vertical',
+  overflow: 'hidden',
+})
+
+const AnimContainer = styled(motion.div, {
+  position: 'relative',
+  width: '100%',
+  padding: '20px',
+})
+
+const AnimHovered = styled(motion.div, {
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  right: '0',
+  bottom: '0',
+  background: '$hover',
+  borderRadius: '$borderRadius',
+  zIndex: -1,
+})
 
 Projects.Layout = Main;
 
