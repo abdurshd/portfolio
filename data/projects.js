@@ -53,7 +53,7 @@ const items = [
         icon: "star",
         overallExpl: 'It is a Next.js web app as a personal portfolio',
         usedSkillsExpl: 'For this project Next.JS, Next SEO, Kbar, React Rough Notation, framer-motion and other small tools have been used.',
-        image: 'https://i.ibb.co/4V6nC3k/porfolio.png',
+        image: 'https://ibb.co/mcLVdgp',
         deployedLink: 'https://abdurashid.tech'
       },
     ],
