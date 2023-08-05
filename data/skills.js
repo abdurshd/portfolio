@@ -1,6 +1,6 @@
 const skillCategories = [
     {
-      name: "Followings are the framework and programming tools I use(d):",
+      name: "Followings are the framework and programming tools:",
       items: [
         {
           title: "Javascript",
@@ -9,7 +9,7 @@ const skillCategories = [
           url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         },
         {
-          title: "React.JS",
+          title: "React",
           description:
             "is a JavaScript library for building user interfaces, using component-based architecture and hooks.",
           url: "https://react.dev",
@@ -29,7 +29,7 @@ const skillCategories = [
           ],
         },
         {
-          title: "Next.JS",
+          title: "Next.js",
           description: "is a React-based framework, simplifies web application development by providing structure, features, and automatic tooling configuration for speed and interactivity.",
           url: "https://nextjs.org/docs",
           projects: [
@@ -51,13 +51,13 @@ const skillCategories = [
           url: "https://www.typescriptlang.org/docs/",
         },
         {
-          title: "Node.JS",
+          title: "Node.js",
           description:
           "is a runtime environment for executing JavaScript server-side, supporting non-blocking, event-driven I/O operations.",
           url: "https://nodejs.dev/en/learn/",
         },
         {
-          title: "Express.JS",
+          title: "Express.js",
           description: "is a flexible, minimalist Node.js web application framework, useful for creating web and mobile apps.",
           url: "https://expressjs.com/en/guide/routing.html",
           projects: [

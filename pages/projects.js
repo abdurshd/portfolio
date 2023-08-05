@@ -140,7 +140,7 @@ function Animation(props) {
 const Article = styled('a', {
   border: '0 !important',
   width: '370px',
-  margin: '0 20px',
+  margin: '5px 20px',
   textDecoration: 'none',
   '&:hover': { opacity: 1 },
   '&:first-child': { marginLeft: 0 },
@@ -148,7 +148,9 @@ const Article = styled('a', {
 
 const Container = styled('div', {
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
+  '@bp2': { flexDirection: 'row-reverse'},
+
 })
 
 const ImageContainer = styled('div', {
@@ -162,19 +164,19 @@ const ImageContainer = styled('div', {
 })
 
 const Content = styled('div', {
-  maxWidth: '450px',
+  maxWidth: '410px',
   '@bp2': { maxWidth: '100%', marginRight: 0 },
 })
 
 const Title = styled('h3', {
   color: '$primary',
-  margin: 0,
+  margin: "5px 40px",
 })
 
 const Description = styled('p', {
   color: '$secondary',
   display: '-webkit-box',
-  margin: 0,
+  margin: '5px 20px',
   WebkitLineClamp: '2',
   WebkitBoxOrient: 'vertical',
   overflow: 'hidden',
@@ -182,8 +184,8 @@ const Description = styled('p', {
 
 const AnimContainer = styled(motion.div, {
   position: 'relative',
-  width: '100%',
-  padding: '20px',
+  maxWidth: '100%',
+  padding: 10
 })
 
 const AnimHovered = styled(motion.div, {

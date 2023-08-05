@@ -41,7 +41,7 @@ function About(props) {
           </Paragraph>
           <Paragraph>
           Fast forward to 2017,  I was doing my law school. One day, I stumbled upon an<strong> <a href='https://kun.uz/uz/news/2017/11/03/sunij-intellekt-londonning-eng-ahsi-uristlarini-ortda-koldirdi'>article</a></strong> that spun my world around. It was about an <strong>AI 'lawyer'</strong> in the UK that apparently <strong>had a better judgment record</strong> than top 100 lawyers of London. Mind blown🤯, right?
-          Don't forget it was 2017, long before than ChatGPT!
+          Don't forget it was 2017, long before than GPT-3 or 4!
           <br/>
           That little nugget of information tickled my curiosity about all things IT and AI. I found myself gradually drawn into the world of <strong>Python</strong> and dabbling in data science with. Not long earlier, I was knee-deep in web development. And funny enough, I was enjoying it more than I'd ever enjoyed data science. So <strong>I sticked to web development.</strong>
           </Paragraph>

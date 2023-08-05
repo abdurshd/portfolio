@@ -9,7 +9,7 @@ import Link from "next/link";
 export async function getStaticProps() {
   const meta = {
     title: "Setup| Abdurashid Abarov",
-    description: "Softwares, Frameworks and Hardwares I use(d)",
+    description: "Softwares, Frameworks and Hardwares I enjoy to have",
     tagline: "Skills & Setup ",
     primaryColor: 'cyan',
     secondaryColor: 'pink',
