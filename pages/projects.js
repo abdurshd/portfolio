@@ -23,7 +23,7 @@ export async function getStaticProps() {
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ["Doston-Law", "House Bazaar", "Github Search", "Portfolio"];
+    const featured = ["Doston-Law", "House Bazaar", "Github Search", "Personal Portfolio"];
 
     return items
       .map((item) => {
@@ -47,7 +47,7 @@ function Projects(props) {
       return (
         <div key={index}>
           <h3>{item.year}</h3>
-          <ul>
+          <ul style={{ margin: 0, paddingLeft: 0 }}>
             {item.projects.map((project, pIndex) => {
               return <ProjectsDetailed key={pIndex} project={project} />;
             })}
@@ -140,7 +140,7 @@ function Animation(props) {
 const Article = styled('a', {
   border: '0 !important',
   width: '370px',
-  margin: '5px 20px',
+  margin: '5px',
   textDecoration: 'none',
   '&:hover': { opacity: 1 },
   '&:first-child': { marginLeft: 0 },
@@ -157,30 +157,34 @@ const ImageContainer = styled('div', {
   borderRadius: '8px',
   width: '370px',
   height: '180px',
-  margin: '20px',
+  margin: "55px 5px",
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
 })
 
 const Content = styled('div', {
-  maxWidth: '410px',
+  maxWidth: '370px',
   '@bp2': { maxWidth: '100%', marginRight: 0 },
 })
 
 const Title = styled('h3', {
+  display: 'flex',
+  justifyContent: 'flex-start',
   color: '$primary',
-  margin: "5px 40px",
+  margin: "5px 0",
+  '@bp3': {justifyContent: 'center'},
 })
 
 const Description = styled('p', {
+  display: 'flex',
   color: '$secondary',
-  display: '-webkit-box',
-  margin: '5px 20px',
-  WebkitLineClamp: '2',
-  WebkitBoxOrient: 'vertical',
-  overflow: 'hidden',
+  margin: '5px 10px 5px 0',
+  width: '370px',
+  '@bp3': { width: '340px', justifyContent: 'center',  textAlign: 'center'},
 })
+
+
 
 const AnimContainer = styled(motion.div, {
   position: 'relative',
@@ -195,6 +199,7 @@ const AnimHovered = styled(motion.div, {
   right: '0',
   bottom: '0',
   background: '$hover',
+  maxWidth: '100%',
   borderRadius: '$borderRadius',
   zIndex: -1,
 })

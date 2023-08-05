@@ -47,7 +47,7 @@ const items = [
     year: "2023.01 - Present",
     projects: [
       {
-        title: "Portfolio",
+        title: "Personal Portfolio",
         url: "https://github.com/abdurshd/portfolio",
         description: "Personal portfolio webpage.",
         icon: "star",
