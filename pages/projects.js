@@ -161,6 +161,9 @@ const ImageContainer = styled('div', {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
+  '@bp3': {width: '320px',
+  height: '150px',},
+
 })
 
 const Content = styled('div', {
@@ -173,7 +176,6 @@ const Title = styled('h3', {
   justifyContent: 'flex-start',
   color: '$primary',
   margin: "5px 0",
-  '@bp3': {justifyContent: 'center'},
 })
 
 const Description = styled('p', {
@@ -181,7 +183,7 @@ const Description = styled('p', {
   color: '$secondary',
   margin: '5px 10px 5px 0',
   width: '370px',
-  '@bp3': { width: '340px', justifyContent: 'center',  textAlign: 'center'},
+  '@bp3': { width: '320px'},
 })
 
 
