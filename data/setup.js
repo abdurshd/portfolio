@@ -89,7 +89,7 @@ const setupCategories = [
       {
         title: "M720 TRIATHLON mouse",
         description:
-          "Better ergonomics, more, customizable functionality and poor swipe abilities",
+          "Better ergonomics, more customizable functionality and poor swipe abilities",
         url: "https://www.logitech.com/en-in/products/mice/m720-triathlon.910-004792.html",
       },
       {

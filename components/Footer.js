@@ -13,6 +13,11 @@ export default function Footer() {
       url: "https://www.linkedin.com/in/abdurshd",
       icon: "ri-linkedin-line",
     },
+    {
+      title: "contact",
+      url: "mailto:abdurashid@outlook.com",
+      icon: "ri-mail-line",
+    },
   ];
 
   const renderAnchor = (link, index) => {
