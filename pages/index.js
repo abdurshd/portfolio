@@ -6,6 +6,8 @@ import ShortcutHome from "../components/ShortcutHome";
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { Wrapper } from '../components/Wrapper'
 import { RoughNotation } from "react-rough-notation";
+import giphy from '../public/static/img/posts/giphy.gif'
+import Image from 'next/image';
 
 
 export async function getStaticProps() {
@@ -62,6 +64,7 @@ function Index(props) {
             </div>
           </PostContainer>
         </PostContent>
+          <Image src={giphy} alt='loading gif' width='500' height='500' style={{borderRadius: '50%'}} priority />
       </Home>
       <Footer />
     </Wrapper>
