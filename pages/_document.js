@@ -1,19 +1,24 @@
-import React from "react";
-import Document, { Html, Head/*  Body */, Main, NextScript } from "next/document";
-import { getCssText } from "../stitches.config";
-import { GA_TRACKING_ID } from "../lib/gtag";
+import React from 'react'
+import Document, {
+  Html,
+  Head /*  Body */,
+  Main,
+  NextScript,
+} from 'next/document'
+import { getCssText } from '../stitches.config'
+import { GA_TRACKING_ID } from '../lib/gtag'
 
 export default class extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
-    const lang = this.props.__NEXT_DATA__.props.pageProps?.post?.lang;
+    const lang = this.props.__NEXT_DATA__.props.pageProps?.post?.lang
 
     return (
-      <Html lang={lang ? lang : "en-US"}>
+      <Html lang={lang ? lang : 'en-US'}>
         <Head>
           <meta charSet="utf-8" />
           <meta content="Abdurashid Abarov" name="author" />
@@ -26,9 +31,21 @@ export default class extends Document {
           />
 
           <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
-          <link rel="alternate" type="application/rss+xml" href="https://abdurashid.tech/rss/feed.xml"/>
-          <link rel="alternate" type="application/atom+xml" href="https://abdurashid.tech/rss/atom.xml" />
-          <link rel="alternate" type="application/feed+json" href="https://abdurashid.tech/rss/feed.json" />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="https://abdurashid.tech/rss/feed.xml"
+          />
+          <link
+            rel="alternate"
+            type="application/atom+xml"
+            href="https://abdurashid.tech/rss/atom.xml"
+          />
+          <link
+            rel="alternate"
+            type="application/feed+json"
+            href="https://abdurashid.tech/rss/feed.json"
+          />
 
           <script
             async
@@ -50,6 +67,6 @@ export default class extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }

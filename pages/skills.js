@@ -1,30 +1,28 @@
-import React, {useState} from "react";
-import Head from "next/head";
-import Main from "../layouts/Main";
-import stripHtml from "../lib/strip-html";
-import skillCategories from "../data/skills";
-import Link from "next/link";
-import { RoughNotation } from "react-rough-notation";
-
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Main from '../layouts/Main'
+import stripHtml from '../lib/strip-html'
+import skillCategories from '../data/skills'
+import Link from 'next/link'
+import { RoughNotation } from 'react-rough-notation'
 
 export async function getStaticProps() {
   const meta = {
-    title: "Setup & Skills | Abdurashid Abarov",
-    description: "Programming Languages, Frameworks and Tools I use(d)",
-    tagline: "Skills",
+    title: 'Setup & Skills | Abdurashid Abarov',
+    description: 'Programming Languages, Frameworks and Tools I use(d)',
+    tagline: 'Skills',
     primaryColor: 'cyan',
     secondaryColor: 'pink',
-    gradientColor: "yellow-pink",
+    gradientColor: 'yellow-pink',
     // selectionColor: "orange",
-  };
+  }
 
-  return { props: meta };
+  return { props: meta }
 }
 
 function Skills(props) {
-  const { title, description } = props;
-  const [isHovered, setIsHovered] = useState('');
-
+  const { title, description } = props
+  const [isHovered, setIsHovered] = useState('')
 
   const renderAll = () => {
     return skillCategories.map((category, index) => {
@@ -35,60 +33,59 @@ function Skills(props) {
             {category.items.map((item, iIndex) => {
               return (
                 <li key={iIndex}>
-                  {
-                    item.url ? 
-                    (
-                      <Link href={item.url} target="_blank">
-                        {item.title}
-                      </Link>
-                    ) :
-                    (<p style={{ color: 'white' }}>{item.title}</p>)
-                  }
-                  {
-                    item.url && <span> - </span>
-                  }
-                  {
-                    item.url && 
-                    (
+                  {item.url ? (
+                    <Link href={item.url} target="_blank">
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <p style={{ color: 'white' }}>{item.title}</p>
+                  )}
+                  {item.url && <span> - </span>}
+                  {item.url && (
                     <span
-                    dangerouslySetInnerHTML={{ __html: item.description }}
+                      dangerouslySetInnerHTML={{ __html: item.description }}
                     />
                   )}
-                  {item.projects && skillCategories.indexOf(category) === 0? 
-                  (
-                  <>
-                  <p>{`Projects that are used ${item.title}`} </p>
-                  <ul>
-                    {item.projects.map((project, jIndex) => {
-                      return (
-                        <>
-                        <li key={jIndex}>
-                          <a href={project.projectUrl} target="_blank"
-                           onMouseEnter={() => setIsHovered(project.projectTitle)}
-                           onMouseLeave={() => setIsHovered('')}
-                           >
-                            <RoughNotation type="box" show={isHovered === project.projectTitle}>
-                            {project.projectTitle}
-                            </RoughNotation>
-                          </a>
-                        </li>
-                        {item.projects.indexOf(project) === item.projects.length-1 && <br/>}
-                        </>
-                      );
-                    })}
-                  </ul>
-                  </>
-                  ) :
-                  (null)
-                  }
+                  {item.projects && skillCategories.indexOf(category) === 0 ? (
+                    <>
+                      <p>{`Projects that are used ${item.title}`} </p>
+                      <ul>
+                        {item.projects.map((project, jIndex) => {
+                          return (
+                            <>
+                              <li key={jIndex}>
+                                <a
+                                  href={project.projectUrl}
+                                  target="_blank"
+                                  onMouseEnter={() =>
+                                    setIsHovered(project.projectTitle)
+                                  }
+                                  onMouseLeave={() => setIsHovered('')}
+                                >
+                                  <RoughNotation
+                                    type="box"
+                                    show={isHovered === project.projectTitle}
+                                  >
+                                    {project.projectTitle}
+                                  </RoughNotation>
+                                </a>
+                              </li>
+                              {item.projects.indexOf(project) ===
+                                item.projects.length - 1 && <br />}
+                            </>
+                          )
+                        })}
+                      </ul>
+                    </>
+                  ) : null}
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
-      );
-    });
-  };
+      )
+    })
+  }
 
   return (
     <div className="single">
@@ -105,12 +102,12 @@ function Skills(props) {
 
       {renderAll()}
     </div>
-  );
+  )
 }
 
-Skills.Layout = Main;
+Skills.Layout = Main
 
-export default Skills;
+export default Skills
 
 // import { styled } from '../stitches.config'
 // import Head from "next/head";

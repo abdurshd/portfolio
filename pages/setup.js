@@ -1,29 +1,27 @@
-import React, {useState} from "react";
-import Head from "next/head";
-import Main from "../layouts/Main";
-import stripHtml from "../lib/strip-html";
-import setupCategories from "../data/setup";
-import Link from "next/link";
-
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Main from '../layouts/Main'
+import stripHtml from '../lib/strip-html'
+import setupCategories from '../data/setup'
+import Link from 'next/link'
 
 export async function getStaticProps() {
   const meta = {
-    title: "Setup| Abdurashid Abarov",
-    description: "Softwares, Frameworks and Hardwares I enjoy to have",
-    tagline: "Skills & Setup ",
+    title: 'Setup| Abdurashid Abarov',
+    description: 'Softwares, Frameworks and Hardwares I enjoy to have',
+    tagline: 'Skills & Setup ',
     primaryColor: 'cyan',
     secondaryColor: 'pink',
-    gradientColor: "yellow-pink",
+    gradientColor: 'yellow-pink',
     // selectionColor: "orange",
-  };
+  }
 
-  return { props: meta };
+  return { props: meta }
 }
 
 function Setup(props) {
-  const { title, description } = props;
-  const [isHovered, setIsHovered] = useState('');
-
+  const { title, description } = props
+  const [isHovered, setIsHovered] = useState('')
 
   const renderAll = () => {
     return setupCategories.map((category, index) => {
@@ -42,13 +40,13 @@ function Setup(props) {
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
-      );
-    });
-  };
+      )
+    })
+  }
 
   return (
     <div className="single">
@@ -65,9 +63,9 @@ function Setup(props) {
 
       {renderAll()}
     </div>
-  );
+  )
 }
 
-Setup.Layout = Main;
+Setup.Layout = Main
 
-export default Setup;
+export default Setup
