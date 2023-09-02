@@ -9,7 +9,7 @@ export async function getStaticProps() {
   const meta = {
     title: 'Setup| Abdurashid Abarov',
     description: 'Softwares, Frameworks and Hardwares I enjoy to have',
-    tagline: 'Skills & Setup ',
+    tagline: 'Setup ',
     primaryColor: 'cyan',
     secondaryColor: 'pink',
     gradientColor: 'yellow-pink',
