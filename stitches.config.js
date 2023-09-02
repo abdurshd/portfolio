@@ -49,7 +49,6 @@ export const {
   },
 })
 
-
 const globalStyles = globalCss({
   '*': {
     fontFamily: '$body',
@@ -185,4 +184,4 @@ const globalStyles = globalCss({
   ],
 })
 
-globalStyles();
+globalStyles()

@@ -1,10 +1,9 @@
 import { styled } from '../stitches.config'
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { Wrapper } from "../components/Wrapper";
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { Wrapper } from '../components/Wrapper'
 import { PostMain, PostContent, PostContainer } from '../components/Post'
-import { RoughNotation } from "react-rough-notation";
-
+import { RoughNotation } from 'react-rough-notation'
 
 export default function Main({ children }) {
   const { title, tagline, primaryColor, secondaryColor } = children.props
@@ -32,12 +31,8 @@ export default function Main({ children }) {
               );`,
               }}
             >
-              <RoughNotation
-                type="underline"
-                color="white"
-                show
-                >
-              {tagline ? tagline : title}
+              <RoughNotation type="underline" color="white" show>
+                {tagline ? tagline : title}
               </RoughNotation>
             </GradientTitle>
             {children}
@@ -46,7 +41,7 @@ export default function Main({ children }) {
       </PostMain>
       <Footer />
     </Wrapper>
-  );
+  )
 }
 
 const GradientTitle = styled('h1', {

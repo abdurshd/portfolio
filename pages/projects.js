@@ -1,46 +1,50 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import { styled } from '../stitches.config'
-import Head from "next/head";
-import { AnimateSharedLayout } from "framer-motion";
-import Main from "../layouts/Main";
-import FeaturedProject from "../components/FeaturedProject";
+import Head from 'next/head'
+import { AnimateSharedLayout } from 'framer-motion'
+import Main from '../layouts/Main'
+import FeaturedProject from '../components/FeaturedProject'
 import { FeaturedProjects } from '../components/FeaturedProjects'
-import stripHtml from "../lib/strip-html";
-import items from "../data/projects";
+import stripHtml from '../lib/strip-html'
+import items from '../data/projects'
 import { motion } from 'framer-motion'
-
 
 export async function getStaticProps() {
   const meta = {
-    title: "Projects | Abdurashid Abarov",
-    tagline: "Public Projects",
+    title: 'Projects | Abdurashid Abarov',
+    tagline: 'Public Projects',
     primaryColor: 'purple',
     secondaryColor: 'green',
-  };
+  }
 
-  return { props: meta };
+  return { props: meta }
 }
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ["Doston-Law", "House Bazaar", "Github Search", "Personal Portfolio"];
+    const featured = [
+      'Doston-Law',
+      'House Bazaar',
+      'Github Search',
+      'Personal Portfolio',
+    ]
 
     return items
       .map((item) => {
         return item.projects.filter((project) =>
           featured.includes(project.title)
-        );
+        )
       })
       .filter((item) => {
         if (item.length > 0) {
-          return item;
+          return item
         }
       })
       .flat()
       .map((item, index) => {
-        return <FeaturedProject key={index} project={item} />;
-      });
-  };
+        return <FeaturedProject key={index} project={item} />
+      })
+  }
 
   const renderAll = () => {
     return items.map((item, index) => {
@@ -49,21 +53,23 @@ function Projects(props) {
           <h3>{item.year}</h3>
           <ul style={{ margin: 0, paddingLeft: 0 }}>
             {item.projects.map((project, pIndex) => {
-              return <ProjectsDetailed key={pIndex} project={project} />;
+              return <ProjectsDetailed key={pIndex} project={project} />
             })}
           </ul>
         </div>
-      );
-    });
-  };
+      )
+    })
+  }
 
   function ProjectsDetailed(props) {
-    const {project, index} = props;
+    const { project, index } = props
     return (
       <Article href={project.url}>
         <Animation index={index}>
           <Container>
-          <ImageContainer css={{ backgroundImage: `url(${project.image})` }} />
+            <ImageContainer
+              css={{ backgroundImage: `url(${project.image})` }}
+            />
             <Content>
               <Title>{project.title}</Title>
               <Description>{project.description}</Description>
@@ -75,43 +81,43 @@ function Projects(props) {
       </Article>
     )
   }
-  
-function Animation(props) {
-  const [hovered, setHovered] = useState('')
-  const isHovered = hovered === props.index
 
-  return (
-    <AnimContainer
-      onHoverStart={() => setHovered(props.index)}
-      onHoverEnd={() => setHovered('')}
-      className="featured-article-anim"
-    >
-      {isHovered && (
-        <AnimHovered
-          layoutId="featuredArticles"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
-      )}
+  function Animation(props) {
+    const [hovered, setHovered] = useState('')
+    const isHovered = hovered === props.index
 
-      {props.children}
-    </AnimContainer>
-  )
-}
+    return (
+      <AnimContainer
+        onHoverStart={() => setHovered(props.index)}
+        onHoverEnd={() => setHovered('')}
+        className="featured-article-anim"
+      >
+        {isHovered && (
+          <AnimHovered
+            layoutId="featuredArticles"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+        )}
+
+        {props.children}
+      </AnimContainer>
+    )
+  }
 
   const getTotalProjects = () => {
-    let total = 0;
+    let total = 0
 
     for (let i = 0; i < items.length; i++) {
-      total = total + items[i].projects.length;
+      total = total + items[i].projects.length
     }
 
-    return total;
-  };
+    return total
+  }
 
-  const { title } = props;
-  const description = `On this page you can find <strong>${getTotalProjects()} different</strong> open source apps and libraries I have built or contributed to over the course of my career starting with udemy/codecademy projects.`;
+  const { title } = props
+  const description = `On this page you can find <strong>${getTotalProjects()} different</strong> open source apps and libraries I have built or contributed to over the course of my career starting with udemy/codecademy projects.`
 
   return (
     <div className="single">
@@ -131,10 +137,10 @@ function Animation(props) {
         <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
         <h2>All Projects</h2>
-          {renderAll()}
+        {renderAll()}
       </AnimateSharedLayout>
     </div>
-  );
+  )
 }
 
 const Article = styled('a', {
@@ -149,21 +155,18 @@ const Article = styled('a', {
 const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  '@bp2': { flexDirection: 'row-reverse'},
-
+  '@bp2': { flexDirection: 'row-reverse' },
 })
 
 const ImageContainer = styled('div', {
   borderRadius: '8px',
   width: '370px',
   height: '180px',
-  margin: "55px 5px",
+  margin: '55px 5px',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
-  '@bp3': {width: '320px',
-  height: '150px',},
-
+  '@bp3': { width: '320px', height: '150px' },
 })
 
 const Content = styled('div', {
@@ -175,7 +178,7 @@ const Title = styled('h3', {
   display: 'flex',
   justifyContent: 'flex-start',
   color: '$primary',
-  margin: "5px 0",
+  margin: '5px 0',
 })
 
 const Description = styled('p', {
@@ -183,15 +186,13 @@ const Description = styled('p', {
   color: '$secondary',
   margin: '5px 10px 5px 0',
   width: '370px',
-  '@bp3': { width: '320px'},
+  '@bp3': { width: '320px' },
 })
-
-
 
 const AnimContainer = styled(motion.div, {
   position: 'relative',
   maxWidth: '100%',
-  padding: 10
+  padding: 10,
 })
 
 const AnimHovered = styled(motion.div, {
@@ -206,6 +207,6 @@ const AnimHovered = styled(motion.div, {
   zIndex: -1,
 })
 
-Projects.Layout = Main;
+Projects.Layout = Main
 
-export default Projects;
+export default Projects

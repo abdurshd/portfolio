@@ -4,43 +4,43 @@ import { styled } from '../stitches.config'
 export default function Footer() {
   const links = [
     {
-      title: "GitHub",
-      url: "https://github.com/abdurshd",
-      icon: "ri-github-line",
+      title: 'GitHub',
+      url: 'https://github.com/abdurshd',
+      icon: 'ri-github-line',
     },
     {
-      title: "linkedin",
-      url: "https://www.linkedin.com/in/abdurshd",
-      icon: "ri-linkedin-line",
+      title: 'linkedin',
+      url: 'https://www.linkedin.com/in/abdurshd',
+      icon: 'ri-linkedin-line',
     },
     {
-      title: "contact",
-      url: "mailto:abdurashid@outlook.com",
-      icon: "ri-mail-line",
+      title: 'contact',
+      url: 'mailto:abdurashid@outlook.com',
+      icon: 'ri-mail-line',
     },
-  ];
+  ]
 
   const renderAnchor = (link, index) => {
     if (link.url.startsWith('http')) {
-      return <Anchor key={index} href={link.url} target="_blank">
-        <Title>{link.title}</Title>
-        <Icon className={link.icon} />
-      </Anchor>
+      return (
+        <Anchor key={index} href={link.url} target="_blank">
+          <Title>{link.title}</Title>
+          <Icon className={link.icon} />
+        </Anchor>
+      )
     }
 
-    return <Link key={index} href={link.url} passHref>
-      <Anchor>
-        <Title>{link.title}</Title>
-        <Icon className={link.icon} />
-      </Anchor>
-    </Link>
+    return (
+      <Link key={index} href={link.url} passHref>
+        <Anchor>
+          <Title>{link.title}</Title>
+          <Icon className={link.icon} />
+        </Anchor>
+      </Link>
+    )
   }
 
-  return (
-    <Container>
-      {links.map(renderAnchor)}
-    </Container>
-  )
+  return <Container>{links.map(renderAnchor)}</Container>
 }
 
 const Container = styled('footer', {
