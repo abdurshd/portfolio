@@ -67,8 +67,8 @@ function Index(props) {
         <Image
           src={giphy}
           alt="loading gif"
-          width="500"
-          height="500"
+          width="500px"
+          height="500px"
           style={{ borderRadius: '50%' }}
           priority
         />
