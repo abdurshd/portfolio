@@ -106,7 +106,7 @@ const skillCategories = [
       },
       {
         title:
-          'HTML, CSS, Bootstrap, DaisyUI, Redux, NextAuth.Js, EJS, JQuery, Git, Github. ',
+          'HTML, CSS, Bootstrap, MaterialUI, DaisyUI, Redux, Recoil, NextAuth.Js, EJS, Fastify, JQuery, Git, Github. ',
       },
     ],
   },
