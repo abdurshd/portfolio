@@ -60,7 +60,8 @@ function Projects(props) {
   function ProjectsDetailed(props) {
     const {project, index} = props;
     return (
-      <Article href={project.url}>
+      <Link href={project.url}>
+      <Article>
         <Animation index={index}>
           <Container>
           <ImageContainer css={{ backgroundImage: `url(${project.image})` }} />
@@ -73,6 +74,7 @@ function Projects(props) {
           </Container>
         </Animation>
       </Article>
+      </Link>
     )
   }
   
@@ -137,7 +139,7 @@ function Animation(props) {
   );
 }
 
-const Article = styled('a', {
+const Article = styled('div', {
   border: '0 !important',
   width: '370px',
   margin: '5px',

@@ -4,8 +4,8 @@ import { getCssText } from "../stitches.config";
 import { GA_TRACKING_ID } from "../lib/gtag";
 
 export default class extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
+  static async getServerSideProps(ctx) {
+    const initialProps = await Document.getServerSideProps(ctx);
     return { ...initialProps };
   }
 
