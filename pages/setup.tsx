@@ -14,15 +14,13 @@ export async function getStaticProps() {
     primaryColor: 'cyan',
     secondaryColor: 'pink',
     gradientColor: "yellow-pink",
-    // selectionColor: "orange",
   };
 
   return { props: meta };
 }
 
-function Setup(props) {
+function Setup(props: any) {
   const { title, description } = props;
-  const [isHovered, setIsHovered] = useState('');
 
 
   const renderAll = () => {

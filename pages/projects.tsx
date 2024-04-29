@@ -8,6 +8,7 @@ import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from "../lib/strip-html";
 import items from "../data/projects";
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 
 export async function getStaticProps() {
@@ -21,7 +22,7 @@ export async function getStaticProps() {
   return { props: meta };
 }
 
-function Projects(props) {
+function Projects(props: any) {
   const renderFeatured = () => {
     const featured = ["Doston-Law", "House Bazaar", "Github Search", "Personal Portfolio"];
 

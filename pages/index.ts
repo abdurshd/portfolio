@@ -3,8 +3,8 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ShortcutHome from "../components/ShortcutHome";
-import { PostMain, PostContent, PostContainer } from '../components/Post'
-import { Wrapper } from '../components/Wrapper'
+import { PostMain, PostContent, PostContainer } from "../components/Post"
+import { Wrapper } from "../components/Wrapper"
 import { RoughNotation } from "react-rough-notation";
 import giphy from '../public/static/img/posts/giphy.gif'
 import Image from 'next/image';
@@ -21,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-function Index(props) {
+function Index(props: any) {
   const { title, description, seoDescription } = props;
 
   return (
