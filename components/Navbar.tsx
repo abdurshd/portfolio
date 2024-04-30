@@ -30,28 +30,24 @@ export default function Navbar() {
                 <li key={page}>
                   <Link href={path} passHref>
                     <Anchor>
-                      <NavContainer
-                        onHoverStart={() => setHovered(page)}
-                        onHoverEnd={() => setHovered("")}
-                        css={
-                          router.pathname == path
-                            ? {
-                                color: "$primary",
-                                "&::after": { opacity: 1 },
-                              }
-                            : ""
-                        }
+                      <div
+                        className={`relative inline-block px-5 uppercase transition-colors duration-200 ease-in-out hover:text-primary text-secondary font-medium text-sm tracking-wider cursor-pointer ${
+                          router.pathname == path ? "text-primary" : ""
+                        }`}
+                        onMouseEnter={() => setHovered(page)}
+                        onMouseLeave={() => setHovered("")}
                       >
                         {isHovered && (
-                          <NavHovered
+                          <motion.span
+                            className="absolute top-[-15px] left-0 right-0 bg-[var(--hover)] p-5 rounded-[var(--borderRadius)] z-[-1]"
                             layoutId="nav"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                           />
-                        )}
-                        {page}
-                      </NavContainer>
+                      )}
+                      {page}
+                    </div>
                     </Anchor>
                   </Link>
                 </li>
@@ -107,7 +103,6 @@ const ButtonHeader = styled("div", {
   border: "none",
   borderRadius: "$borderRadius",
   color: "white",
-  cursor: "pointer",
   cursor: "pointer",
   height: "34px",
   padding: "0 10px",

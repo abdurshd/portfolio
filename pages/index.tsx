@@ -1,13 +1,13 @@
+import { PostMain, PostContent, PostContainer } from "../components/Post"
 import { styled } from '../stitches.config'
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ShortcutHome from "../components/ShortcutHome";
-import { PostMain, PostContent, PostContainer } from "../components/Post"
-import { Wrapper } from "../components/Wrapper"
 import { RoughNotation } from "react-rough-notation";
 import giphy from '../public/static/img/posts/giphy.gif'
 import Image from 'next/image';
+import Link from "next/link";
 
 
 export async function getStaticProps() {
@@ -25,18 +25,17 @@ function Index(props: any) {
   const { title, description, seoDescription } = props;
 
   return (
-    <Wrapper>
+    <div className="flex flex-col min-h-screen relative z-0">
       <Head>
         <title>{title}</title>
         <meta content={title} property="og:title" />
         <meta content={seoDescription} name="description" />
         <meta content={seoDescription} property="og:description" />
         <meta content="https://abdurashid.tech" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech" />
+        <Link rel="cannonical" href="https://abdurashid.tech" />
       </Head>
-
       <Navbar />
-      <Home>
+      <div  className="overflow-hidden flex-auto pt-[var(--navHeightMobile)] md:pt-[var(--navHeightDesktop)]">
         <PostContent>
           <PostContainer>
             <div>
@@ -65,17 +64,10 @@ function Index(props: any) {
           </PostContainer>
         </PostContent>
           <Image src={giphy} alt='loading gif' width='500' height='500' style={{borderRadius: '50%'}} priority />
-      </Home>
+      </div>
       <Footer />
-    </Wrapper>
+    </div>
   );
 }
-
-const Home = styled(PostMain, {
-  alignItems: 'center',
-  display: 'flex',
-  margin: '0 auto',
-  '@bp2': { width: 800 },
-})
 
 export default Index;

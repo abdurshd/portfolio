@@ -58,7 +58,7 @@ function Projects(props: any) {
     });
   };
 
-  function ProjectsDetailed(props) {
+  function ProjectsDetailed(props: any) {
     const {project, index} = props;
     return (
       <Link href={project.url}>
@@ -79,7 +79,7 @@ function Projects(props: any) {
     )
   }
   
-function Animation(props) {
+function Animation(props: any) {
   const [hovered, setHovered] = useState('')
   const isHovered = hovered === props.index
 

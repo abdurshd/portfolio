@@ -8,9 +8,9 @@ import CommandBar from '../components/CommandBar'
 
 Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
-const Noop = ({ children }) => children
+const Noop = ({ children } : {children: any} ) => children
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps } : {Component: any, pageProps: any}) {
   const Layout = Component.Layout || Noop
 
   return (

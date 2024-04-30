@@ -1,7 +1,6 @@
 import { styled } from '../stitches.config'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Wrapper } from "../components/Wrapper";
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { RoughNotation } from "react-rough-notation";
 
@@ -10,7 +9,7 @@ export default function Main({ children }) {
   const { title, tagline, primaryColor, secondaryColor } = children.props
 
   return (
-    <Wrapper>
+    <div>
       <Navbar />
       <PostMain
         css={{
@@ -45,7 +44,7 @@ export default function Main({ children }) {
         </PostContent>
       </PostMain>
       <Footer />
-    </Wrapper>
+    </div>
   );
 }
 

@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BlogDate from "../components/BlogDate";
 import { Post, PostMain, PostContent, PostContainer } from "../components/Post";
-import { Wrapper } from '../components/Wrapper'
+import { ReactElement } from "react";
 
-export default function Blogpost({ children }) {
-  const { title, image, date } = children.props;
+export default function Blogpost({ children} : { children: ReactElement }) {
+  const { title, image, date } = children?.props;
 
   return (
-    <Wrapper>
-      <Navbar image={image} />
+    <div className="flex flex-col min-h-screen relative z-0">
+      <Navbar />
       <Main image={image}>
         {image && (
           <PostHeader>
@@ -47,11 +47,11 @@ export default function Blogpost({ children }) {
         </PostContent>
       </Main>
       <Footer />
-    </Wrapper>
+    </div>
   );
 }
 
-function Main(props) {
+function Main(props: any) {
   return props.image ? (
     <Post>{props.children}</Post>
   ) : (

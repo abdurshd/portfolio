@@ -12,10 +12,26 @@ import {
   KBarResults,
 } from "kbar";
 
-export default function CommandBar(props) {
+interface Action {
+  id: string;
+  name: string;
+  shortcut: string[] | undefined;
+  keywords: string | undefined;
+  section: string;
+  perform: () => void;
+  icon: React.ReactElement;
+}
+
+interface MyComponentProps {
+  action: Action;
+  active: boolean;
+}
+
+export default function CommandBar({children, iconStyle}: {children: React.ReactNode, iconStyle: any}): React.ReactElement {
   const router = useRouter();
 
-  const actions = [
+  let actions: Action[];
+  actions = [
     {
       id: "home",
       name: "Home",
@@ -23,7 +39,7 @@ export default function CommandBar(props) {
       keywords: "go-home",
       section: "Go To",
       perform: () => router.push("/"),
-      icon: <i className="ri-home-5-line" style={iconStyle} />,
+      icon: <i className = "ri-home-5-line" style = {iconStyle} />,
     },
     {
       id: "about",
@@ -113,8 +129,7 @@ export default function CommandBar(props) {
           </Animator>
         </Positioner>
       </KBarPortal>
-
-      {props.children}
+      {children}
     </KBarProvider>
   );
 }
@@ -129,26 +144,26 @@ function RenderResults() {
         typeof item === "string" ? (
           <GroupName>{item}</GroupName>
         ) : (
-          <ResultItem action={item} active={active} />
+          item && <ResultItem action={item} active={active} />
         )
       }
     />
   );
 }
 
-const ResultItem = React.forwardRef(({ action, active }, ref) => {
+const ResultItem = React.forwardRef(({ action, active }: MyComponentProps, ref: React.Ref<HTMLDivElement>) => {
   return (
     <Box ref={ref} css={getResultStyle(active)}>
-      <Action>
+      <div className="flex gap-8 items-center justify-center">
         {action.icon && action.icon}
-        <ActionRow>
+        <div className="flex flex-col">
           <span>{action.name}</span>
-        </ActionRow>
-      </Action>
+        </div>
+      </div>
       {action.shortcut?.length ? (
         <Shortcut aria-hidden>
-          {action.shortcut.map((shortcut) => (
-            <Kbd key={shortcut}>{shortcut}</Kbd>
+          {action.shortcut.map((shortcut: React.Key) => (
+            <Kbd key={shortcut.toString()}>{shortcut}</Kbd>
           ))}
         </Shortcut>
       ) : null}
@@ -169,16 +184,6 @@ const Shortcut = styled("div", {
   gap: "4px",
 });
 
-const Action = styled("div", {
-  display: "flex",
-  gap: "8px",
-  alignItems: "center",
-});
-
-const ActionRow = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-});
 const Positioner = styled(KBarPositioner, {
   position: "fixed",
   display: "flex",

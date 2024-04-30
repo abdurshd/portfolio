@@ -1,7 +1,7 @@
 import ShortcutError from "./ShortcutError";
 import { Box } from './Box'
 
-export default function ErrorMessage({ code }) {
+export default function ErrorMessage({ code}: {code: any}) {
   let title = "Oops! An Error Occured";
   let description = "Something is broken.";
 
