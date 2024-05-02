@@ -10,17 +10,9 @@ import {
   KBarPositioner,
   KBarSearch,
   KBarResults,
+  Action,
 } from "kbar";
 
-interface Action {
-  id: string;
-  name: string;
-  shortcut: string[] | undefined;
-  keywords: string | undefined;
-  section: string;
-  perform: () => void;
-  icon: React.ReactElement;
-}
 
 interface MyComponentProps {
   action: Action;
@@ -30,8 +22,8 @@ interface MyComponentProps {
 export default function CommandBar({children, iconStyle}: {children: React.ReactNode, iconStyle: any}): React.ReactElement {
   const router = useRouter();
 
-  let actions: Action[];
-  actions = [
+
+  const actions: Action[] = [
     {
       id: "home",
       name: "Home",
@@ -163,7 +155,7 @@ const ResultItem = React.forwardRef(({ action, active }: MyComponentProps, ref: 
       {action.shortcut?.length ? (
         <Shortcut aria-hidden>
           {action.shortcut.map((shortcut: React.Key) => (
-            <Kbd key={shortcut.toString()}>{shortcut}</Kbd>
+            <kbd className={`bg-opacity-10 text-[secondaryColor] px-2 py-1 uppercase`} key={shortcut.toString()}>{shortcut}</kbd>
           ))}
         </Shortcut>
       ) : null}
@@ -171,12 +163,6 @@ const ResultItem = React.forwardRef(({ action, active }: MyComponentProps, ref: 
   );
 });
 
-const Kbd = styled("kbd", {
-  background: "rgba(255, 255, 255, .1)",
-  color: "$secondary",
-  padding: "4px 8px",
-  textTransform: "uppercase",
-});
 
 const Shortcut = styled("div", {
   display: "grid",
@@ -247,7 +233,7 @@ const iconStyle = {
   top: "-2px",
 };
 
-const getResultStyle = active => {
+const getResultStyle = (active: any) => {
   return {
     padding: '12px 16px',
     background: active ? 'rgba(255, 255, 255, 0.1)' : '$command',

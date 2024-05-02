@@ -1,5 +1,4 @@
-import { PostMain, PostContent, PostContainer } from "../components/Post"
-import { styled } from '../stitches.config'
+import {  PostContent, PostContainer } from "../components/Post"
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";

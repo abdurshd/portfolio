@@ -20,7 +20,7 @@ export async function getStaticProps() {
   return { props: meta };
 }
 
-function About(props) {
+function About(props: any) {
   const { title, description } = props;
 
   const renderIntro = () => {
@@ -102,7 +102,7 @@ function About(props) {
     });
   };
 
-  const getDuration = (startDate, endDate) => {
+  const getDuration = (startDate: any, endDate: any) => {
     const durationObj = intervalToDuration({
       start: parseISO(startDate),
       end: endDate ? parseISO(endDate) : new Date(),
@@ -110,7 +110,7 @@ function About(props) {
 
     let durationStr = "";
 
-    if (durationObj.years > 1) {
+    if (durationObj.years && durationObj.years > 1) {
       durationStr = `${durationObj.years} yrs `;
     } else if (durationObj.years === 1) {
       durationStr = `${durationObj.years} yr `;

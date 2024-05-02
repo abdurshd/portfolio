@@ -79,7 +79,6 @@ export const PostContent = styled('div', {
       minWidth: '100%',
     },
     '@bp4': {
-      // marginLeft: 0,
     },
   },
   '& .side-by-side-caption': {

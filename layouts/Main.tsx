@@ -1,15 +1,14 @@
-import { styled } from '../stitches.config'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { RoughNotation } from "react-rough-notation";
 
 
-export default function Main({ children }) {
-  const { title, tagline, primaryColor, secondaryColor } = children.props
+export default function Main({ children } :{ children: React.ReactElement }) {
+  const { title, tagline, primaryColor } = children?.props
 
   return (
-    <div>
+    <div className='flex flex-col min-h-screen relative z-0'>
       <Navbar />
       <PostMain
         css={{
@@ -22,15 +21,7 @@ export default function Main({ children }) {
       >
         <PostContent>
           <PostContainer>
-            <GradientTitle
-              css={{
-                backgroundImage: `linear-gradient(
-                135deg,
-                $${primaryColor} 0%,
-                $${secondaryColor} 100%
-              );`,
-              }}
-            >
+            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[primaryColor] to-[secondaryColor]">
               <RoughNotation
                 type="underline"
                 color="white"
@@ -38,7 +29,7 @@ export default function Main({ children }) {
                 >
               {tagline ? tagline : title}
               </RoughNotation>
-            </GradientTitle>
+            </h1>
             {children}
           </PostContainer>
         </PostContent>
@@ -47,13 +38,3 @@ export default function Main({ children }) {
     </div>
   );
 }
-
-const GradientTitle = styled('h1', {
-  backgroundSize: '100%',
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  MozBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  MozTextFillColor: 'transparent',
-  WebkitBoxDecorationBreak: 'clone',
-})
