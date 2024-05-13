@@ -1,3 +1,4 @@
+"use client"
 import React, {useState} from "react";
 import Head from "next/head";
 import Main from "../../app/Main";
@@ -7,18 +8,18 @@ import Link from "next/link";
 import { RoughNotation } from "react-rough-notation";
 
 
-export async function getStaticProps() {
-  const meta = {
-    title: "Setup & Skills | Abdurashid Abarov",
-    description: "Programming Languages, Frameworks and Tools I use(d)",
-    tagline: "Skills",
-    primaryColor: 'cyan',
-    secondaryColor: 'pink',
-    gradientColor: "yellow-pink",
-  };
+// export async function getStaticProps() {
+//   const meta = {
+//     title: "Setup & Skills | Abdurashid Abarov",
+//     description: "Programming Languages, Frameworks and Tools I use(d)",
+//     tagline: "Skills",
+//     primaryColor: 'cyan',
+//     secondaryColor: 'pink',
+//     gradientColor: "yellow-pink",
+//   };
 
-  return { props: meta };
-}
+//   return { props: meta };
+// }
 
 function Skills(props: any) {
   const { title, description } = props;
@@ -37,7 +38,7 @@ function Skills(props: any) {
                   {
                     item.url ? 
                     (
-                      <Link href={item.url} target="_blank">
+                      <Link href={item.url} target="_blank" legacyBehavior>
                         {item.title}
                       </Link>
                     ) :
@@ -97,7 +98,7 @@ function Skills(props: any) {
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
         <meta content="https://abdurashid.tech/skills" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech/skills" />
+        <Link rel="cannonical" href="https://abdurashid.tech/skills" legacyBehavior/>
       </Head>
 
       <p dangerouslySetInnerHTML={{ __html: description }} />

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box } from "./Box";
-import { styled } from "../stitches.config";
+import { styled } from "../../stitches.config";
 import { useRouter } from "next/router";
 import {
   KBarAnimator,

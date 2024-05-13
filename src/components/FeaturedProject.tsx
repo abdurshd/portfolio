@@ -1,4 +1,4 @@
-import { styled } from "../stitches.config";
+import { styled } from "../../stitches.config";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -7,7 +7,7 @@ const FeaturedProjectIcon = styled("div", {
   padding: "0 10px 0 0",
 });
 
-export default function FeaturedProject(props) {
+export default function FeaturedProject(props: any) {
   const { project } = props;
 
   return (
@@ -26,7 +26,7 @@ export default function FeaturedProject(props) {
   );
 }
 
-function Animation(props) {
+function Animation(props: any) {
   const [hovered, setHovered] = useState("");
   const isHovered = hovered === props.index;
 

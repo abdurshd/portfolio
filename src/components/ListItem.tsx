@@ -1,15 +1,15 @@
-import { styled } from '../stitches.config'
+import { styled } from '../../stitches.config'
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import BlogDate from './BlogDate'
 
-export default function ListItem(props) {
+export default function ListItem(props: any) {
   // Articles
   if (props.href.charAt(0) === '/') {
     return (
       <ArticleItem>
-        <Link href={props.href} passHref>
+        <Link href={props.href} passHref legacyBehavior>
           <Anchor>
             <Animation index={props.index}>
               <Title>{props.title}</Title>
@@ -38,7 +38,7 @@ export default function ListItem(props) {
   )
 }
 
-function Animation(props) {
+function Animation(props: any) {
   const [hovered, setHovered] = useState('')
   const isHovered = hovered === props.index
 

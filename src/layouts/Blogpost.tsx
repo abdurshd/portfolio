@@ -1,4 +1,4 @@
-import { styled } from "../stitches.config";
+import { styled } from "../../stitches.config";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BlogDate from "../components/BlogDate";

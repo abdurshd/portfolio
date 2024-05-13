@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config'
+import { styled } from '../../stitches.config'
 
 export const ButtonPrimary = styled('div', {
   appearance: 'none',
@@ -15,10 +15,7 @@ export const ButtonPrimary = styled('div', {
   outline: '0',
   padding: '8px 10px 8px',
   textDecoration: 'none',
-  transition: [
-    'background $duration ease-in-out',
-    'color $duration ease-in-out',
-  ],
+  transition: `background $duration ease-in-out, color $duration ease-in-out`,
   '&:hover': { background: '$hover', color: '$primary', opacity: 1 },
   '&:hover kbd': { background: '$primary' },
 })

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { styled } from '../../../stitches.config'
 import Head from "next/head";
@@ -11,16 +12,16 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 
-export async function getStaticProps() {
-  const meta = {
-    title: "Projects | Abdurashid Abarov",
-    tagline: "Public Projects",
-    primaryColor: 'purple',
-    secondaryColor: 'green',
-  };
+// export async function getStaticProps() {
+//   const meta = {
+//     title: "Projects | Abdurashid Abarov",
+//     tagline: "Public Projects",
+//     primaryColor: 'purple',
+//     secondaryColor: 'green',
+//   };
 
-  return { props: meta };
-}
+//   return { props: meta };
+// }
 
 function Projects(props: any) {
   const renderFeatured = () => {
@@ -61,7 +62,7 @@ function Projects(props: any) {
   function ProjectsDetailed(props: any) {
     const {project, index} = props;
     return (
-      <Link href={project.url}>
+      <Link href={project.url} legacyBehavior>
       <Article>
         <Animation index={index}>
           <Container>
@@ -124,7 +125,7 @@ function Animation(props: any) {
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
         <meta content="https://abdurashid.tech/projects" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech/projects" />
+        <Link rel="cannonical" href="https://abdurashid.tech/projects" legacyBehavior/>
       </Head>
 
       <AnimateSharedLayout>

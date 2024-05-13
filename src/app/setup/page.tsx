@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Head from "next/head";
 import Main from "../../app/Main";
@@ -6,18 +7,18 @@ import setupCategories from "../../data/setup";
 import Link from "next/link";
 
 
-export async function getStaticProps() {
-  const meta = {
-    title: "Setup| Abdurashid Abarov",
-    description: "Softwares, Frameworks and Hardwares I enjoy to have",
-    tagline: "Setup ",
-    primaryColor: 'cyan',
-    secondaryColor: 'pink',
-    gradientColor: "yellow-pink",
-  };
+// export async function getStaticProps() {
+//   const meta = {
+//     title: "Setup| Abdurashid Abarov",
+//     description: "Softwares, Frameworks and Hardwares I enjoy to have",
+//     tagline: "Setup ",
+//     primaryColor: 'cyan',
+//     secondaryColor: 'pink',
+//     gradientColor: "yellow-pink",
+//   };
 
-  return { props: meta };
-}
+//   return { props: meta };
+// }
 
 function Setup(props: any) {
   const { title, description } = props;
@@ -32,7 +33,7 @@ function Setup(props: any) {
             {category.items.map((item, iIndex) => {
               return (
                 <li key={iIndex}>
-                  <Link href={item.url} target="_blank">
+                  <Link href={item.url} target="_blank" legacyBehavior>
                     {item.title}
                   </Link>
                   <span> - </span>
@@ -56,7 +57,7 @@ function Setup(props: any) {
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
         <meta content="https://abdurashid.tech/setup" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech/setup" />
+        <Link rel="cannonical" href="https://abdurashid.tech/setup" legacyBehavior />
       </Head>
 
       <p dangerouslySetInnerHTML={{ __html: description }} />

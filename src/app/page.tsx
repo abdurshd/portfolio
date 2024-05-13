@@ -9,16 +9,16 @@ import Image from 'next/image';
 import Link from "next/link";
 
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
 
-  return {
-    props: {
-      title: "Abdurashid Akbarov",
-      description: "Building state of the art web apps, static sites and tools",
-      seoDescription: "Front End Web Developer. Building front end web apps (at the same time getting into the back end world), static sites and tools. Programming since 2015, getting paid for it since 2022",
-    },
-  };
-}
+//   return {
+//     props: {
+//       title: "Abdurashid Akbarov",
+//       description: "Building state of the art web apps, static sites and tools",
+//       seoDescription: "Front End Web Developer. Building front end web apps (at the same time getting into the back end world), static sites and tools. Programming since 2015, getting paid for it since 2022",
+//     },
+//   };
+// }
 
 function Index(props: any) {
   const { title, description, seoDescription } = props;
@@ -31,7 +31,7 @@ function Index(props: any) {
         <meta content={seoDescription} name="description" />
         <meta content={seoDescription} property="og:description" />
         <meta content="https://abdurashid.tech" property="og:url" />
-        <Link rel="cannonical" href="https://abdurashid.tech" />
+        <Link rel="cannonical" href="https://abdurashid.tech" legacyBehavior />
       </Head>
       <Navbar />
       <div  className="overflow-hidden flex-auto pt-[var(--navHeightMobile)] md:pt-[var(--navHeightDesktop)]">

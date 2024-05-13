@@ -1,13 +1,11 @@
 import React from "react";
 import Document, { Html, Head/*  Body */, Main, NextScript } from "next/document";
-import { getCssText } from "../stitches.config";
+import { getCssText } from "../../stitches.config";
 import { GA_TRACKING_ID } from "../lib/gtag";
+import Link from "next/link";
 
 export default class extends Document {
-  static async getServerSideProps(ctx) {
-    const initialProps = await Document.getServerSideProps(ctx);
-    return { ...initialProps };
-  }
+  
 
   render() {
     const lang = this.props.__NEXT_DATA__.props.pageProps?.post?.lang;
@@ -25,10 +23,10 @@ export default class extends Document {
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
 
-          <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
-          <link rel="alternate" type="application/rss+xml" href="https://abdurashid.tech/rss/feed.xml"/>
-          <link rel="alternate" type="application/atom+xml" href="https://abdurashid.tech/rss/atom.xml" />
-          <link rel="alternate" type="application/feed+json" href="https://abdurashid.tech/rss/feed.json" />
+          <Link rel="icon" href="/favicon.png" type="image/png" />
+          <Link rel="alternate" type="application/rss+xml" href="https://abdurashid.tech/rss/feed.xml"/>
+          <Link rel="alternate" type="application/atom+xml" href="https://abdurashid.tech/rss/atom.xml" />
+          <Link rel="alternate" type="application/feed+json" href="https://abdurashid.tech/rss/feed.json" />
 
           <script
             async

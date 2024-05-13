@@ -12,12 +12,12 @@ export default function ShortcutError() {
     const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent)
 
     if (isMobile) {
-      return <Link href="/" className="btn-transparent btn-primary">
+      return <Link href="/" className="btn-transparent btn-primary" legacyBehavior>
         Tap to go home →
       </Link>
     }
 
-    return <Link href="/" className="btn-transparent btn-primary">
+    return <Link href="/" className="btn-transparent btn-primary" legacyBehavior>
       Press <kbd>G</kbd> <kbd>H</kbd> to go home →
     </Link>
   }

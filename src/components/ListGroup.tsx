@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config'
+import { styled } from '../../stitches.config'
 
 export const ListGroup = styled('ul', {
   listStyle: 'none',
