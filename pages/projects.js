@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { styled } from '../stitches.config'
 import Head from "next/head";
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimateSharedLayout, motion } from "framer-motion";
 import Main from "../layouts/Main";
 import FeaturedProject from "../components/FeaturedProject";
 import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from "../lib/strip-html";
 import items from "../data/projects";
-import { motion } from 'framer-motion'
 
 
 export async function getStaticProps() {
