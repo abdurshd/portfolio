@@ -59,47 +59,50 @@ function About(props) {
   };
 
   const renderAll = () => {
-    return items.map((item, index) => {
-      return (
-        <Container>
-        <Section>
-          <Image
-            alt="Abdurashid"
-            src="/static/images/ricky.jpg"
-            width="256"
-            height="336"
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
-            priority
-          />
-        </Section>
-        <div style={{ marginBottom: 40 }} key={index}>
-        <h2>Career</h2>
-          <h3>{item.jobTitle}</h3>
-          <p style={{ margin: 0 }}>
-            <a href={item.companyUrl} target="_blank">
-              {item.company}
-            </a>
-            <span> • {item.location}</span>
-          </p>
-          <p style={{ margin: 0 }}>
-            <span>{format(parseISO(item.startDate), "LLL yyyy")}</span>
-            <span> – </span>
-            <span>
-              {item.endDate
-                ? format(parseISO(item.endDate), "LLL yyyy")
-                : "Present"}
-            </span>
-            <span> • </span>
-            <span>{getDuration(item.startDate, item.endDate)}</span>
-          </p>
-          <br/>
-          <p style={{ margin: 0 }}> More information about my education, career and </p> 
-          <p style={{ margin: 0 }}>certificates can be seen on my <a href='https://www.linkedin.com/in/abdurshd'>LinkedIn</a></p>
+    return (
+      <div style={{display: 'flex', gap: "100px"}}>
+          <Section>
+            <Image
+              alt="Abdurashid"
+              src="/static/images/ricky.jpg"
+              width="256"
+              height="336"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
+              priority
+              />
+          </Section>
+          <div style={{ marginBottom: 40 }} >
+            <h2>Career</h2>
+            {items.map((item, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <h3>{item.jobTitle}</h3>
+                  <p style={{ margin: 0 }}>
+                    <a href={item.companyUrl} target="_blank">
+                      {item.company}
+                    </a>
+                    <span> • {item.location}</span>
+                  </p>
+                  <p style={{ margin: 0 }}>
+                    <span>{format(parseISO(item.startDate), "LLL yyyy")}</span>
+                    <span> – </span>
+                    <span>
+                      {item.endDate
+                        ? format(parseISO(item.endDate), "LLL yyyy")
+                        : "Present"}
+                    </span>
+                    <span> • </span>
+                    <span>{getDuration(item.startDate, item.endDate)}</span>
+                  </p>
+                </React.Fragment>
+                )
+              })}
+            <p style={{marginBottom: 0}}> More information about my education, career and </p>
+            <p style={{margin: 0}}>certificates can be seen on my <a href='https://www.linkedin.com/in/abdurshd'>LinkedIn</a></p>
+          </div>
         </div>
-        </Container>
       );
-    });
   };
 
   const getDuration = (startDate, endDate) => {
