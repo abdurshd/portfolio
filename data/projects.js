@@ -16,6 +16,21 @@ const items = [
     ],
   },
   {
+    year: "2024.09",
+    projects: [
+      {
+        id: "safe-nest",
+        title: "Safe Nest",
+        description: "A confidential child abuse reporting platform that won second place at Seoul Tech Impact Hackathon 2024",
+        url: "https://github.com/abdurshd/record-abuse",
+        icon: "shield",
+        overallExpl: 'Privacy-focused platform for children to safely report abuse, featuring AI-powered support and end-to-end encryption',
+        usedSkillsExpl: 'Built with Next.js, NextUI, OpenAI API, Vercel Postgres, and TypeScript',
+        image: '/static/images/safenest.png'
+      }
+    ]
+  },
+  {
     year: "2023.03 - Present",
     projects: [
       {

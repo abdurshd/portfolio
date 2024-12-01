@@ -23,7 +23,7 @@ export async function getStaticProps() {
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ["Mizan Restaurant Management", "Doston-Law", "House Bazaar", "Personal Portfolio"];
+    const featured = ["Mizan Restaurant Management", "Personal Portfolio"];
 
     return items
       .map((item) => {
