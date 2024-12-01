@@ -8,7 +8,7 @@ demo: "https://doston-law.uz"
 private: true
 ---
 
-# Doston Law Firm Website
+<!-- # Doston Law Firm Website -->
 
 ## Overview
 A sophisticated, full-stack Next.js web application designed for a prominent law firm in Uzbekistan. This project showcases the perfect blend of modern web technologies and professional legal services presentation.

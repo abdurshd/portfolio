@@ -44,6 +44,15 @@ export default function CommandBar(props) {
       icon: <i className="ri-article-line" style={iconStyle} />,
     },
     {
+      id: "blog",
+      name: "Blog",
+      shortcut: ["g", "b"],
+      keywords: "go-blog",
+      section: "Go To",
+      perform: () => router.push("/blog"),
+      icon: <i className="ri-article-line" style={iconStyle} />,
+    },
+    {
       id: "projects",
       name: "Projects",
       shortcut: ["g", "p"],
@@ -100,6 +109,13 @@ export default function CommandBar(props) {
           "_blank"
         ),
       icon: <i className="ri-linkedin-line" style={iconStyle} />,
+    },
+    {
+      id: "blog",
+      name: "Blog",
+      shortcut: ["b"],
+      keywords: "blog articles posts writing",
+      perform: () => router.push("/blog"),
     },
   ];
 

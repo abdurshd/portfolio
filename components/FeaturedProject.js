@@ -1,6 +1,7 @@
 import { styled } from "../stitches.config";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 const FeaturedProjectIcon = styled("div", {
   fontSize: "24px",
@@ -9,20 +10,28 @@ const FeaturedProjectIcon = styled("div", {
 
 export default function FeaturedProject(props) {
   const { project } = props;
+  
+  // If project has an id, it means it has a details page
+  const ProjectWrapper = project.id ? Link : 'a';
+  const projectProps = project.id 
+    ? { href: `/projects/${project.id}` }
+    : { href: project.url, target: "_blank" };
 
   return (
-    <Project href={project.url} target="_blank">
-      <Animation index={props.index}>
-        <FeaturedProjectIcon>
-          <i className={`ri-${project.icon}-line`} />
-        </FeaturedProjectIcon>
-        <Body>
-          <Title>{project.title}</Title>
-          <Description>{project.description}</Description>
-          <Stats>{project.stats}</Stats>
-        </Body>
-      </Animation>
-    </Project>
+    <ProjectWrapper {...projectProps}>
+      <Project>
+        <Animation index={props.index}>
+          <FeaturedProjectIcon>
+            <i className={`ri-${project.icon}-line`} />
+          </FeaturedProjectIcon>
+          <Body>
+            <Title>{project.title}</Title>
+            <Description>{project.description}</Description>
+            <Stats>{project.stats}</Stats>
+          </Body>
+        </Animation>
+      </Project>
+    </ProjectWrapper>
   );
 }
 

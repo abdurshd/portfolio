@@ -8,7 +8,7 @@ demo: "https://house-bazaar.vercel.app/"
 github: "https://github.com/abdurshd/house-bazaar"
 ---
 
-# House Bazaar
+<!-- # House Bazaar -->
 
 ## Overview
 House Bazaar is a comprehensive real estate platform that simplifies property listing and searching. Built with modern web technologies, it offers a seamless experience for both property owners and seekers.

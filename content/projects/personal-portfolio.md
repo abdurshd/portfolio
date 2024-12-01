@@ -4,11 +4,11 @@ description: "Modern developer portfolio built with Next.js"
 date: "2023-08"
 tech: ["Next.js", "Stitches", "Kbar", "React Rough Notation", "Framer Motion"]
 image: "https://i.ibb.co/wJcZF9M/Screenshot-2023-08-03-at-6-34-28-PM.png"
-github: "https://github.com/abdurshd/abdurashid.com"
+github: "https://github.com/abdurshd/portfolio"
 demo: "https://abdurashid.com"
 ---
 
-# Personal Portfolio Website
+<!-- # Personal Portfolio Website -->
 
 ## Overview
 A modern, interactive portfolio website built with Next.js and enhanced with various React libraries for animations and interactions. This project serves as a comprehensive showcase of my development journey, skills, and projects.

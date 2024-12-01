@@ -26,7 +26,7 @@ During my law studies, I discovered the unlimited potential of IT. What started 
 - Managed database and server using MongoDB and Mongoose
 - Deployed and maintained site on Vercel
 
-### Side Project | QR Menu Ordering System Platform (2024.10 - Present)
+### Side Project | Mizan Restaurant Management System Platform (2024.10 - Present)
 - Developed QR-based menu generation and order management platform
 - Frontend: React, MUI, Redux Toolkit, TypeScript
 - Backend: Node.js, Express.js, PostgreSQL

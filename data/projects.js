@@ -1,5 +1,21 @@
 const items = [
   {
+    year: "2024.10 - Present",
+    projects: [
+      {
+        id: "mizan",
+        title: "Mizan Restaurant Management",
+        description: "Full-stack restaurant management system with QR code menu integration",
+        url: "",  // Since it's private
+        icon: "star",
+        overallExpl: 'Comprehensive restaurant management platform with QR code menu system and real-time order tracking',
+        usedSkillsExpl: 'Built with React, TypeScript, Material-UI, Redux Toolkit, Node.js, Express, PostgreSQL, and AWS infrastructure',
+        image: '/static/images/mizan.png',
+        private: true
+      },
+    ],
+  },
+  {
     year: "2023.03 - Present",
     projects: [
       {
@@ -26,7 +42,7 @@ const items = [
         icon: "star",
         overallExpl: 'It is a Next.js web app as a personal portfolio',
         usedSkillsExpl: 'For this project Next.JS, Next SEO, Kbar, React Rough Notation, framer-motion and other small tools have been used.',
-        image: 'https://i.ibb.co/4V6nC3k/porfolio.png',
+        image: '/static/images/portfel.png',
         deployedLink: 'https://abdurashid.com'
       },
     ],

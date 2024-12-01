@@ -1,7 +1,11 @@
-const nextConfig = {
-  images: {
-    unoptimized: true,
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
   },
-};
+});
 
-module.exports = nextConfig;
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+});

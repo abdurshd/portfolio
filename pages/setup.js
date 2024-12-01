@@ -11,8 +11,8 @@ export async function getStaticProps() {
     title: "Setup| Abdurashid Abarov",
     description: "Softwares, Frameworks and Hardwares I enjoy to have",
     tagline: "Setup ",
-    primaryColor: 'cyan',
-    secondaryColor: 'pink',
+    primaryColor: 'red',
+    secondaryColor: 'purple',
     gradientColor: "yellow-pink",
     // selectionColor: "orange",
   };

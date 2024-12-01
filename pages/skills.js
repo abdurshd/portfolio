@@ -12,7 +12,7 @@ export async function getStaticProps() {
     title: "Setup & Skills | Abdurashid Abarov",
     description: "Programming Languages, Frameworks and Tools I use(d)",
     tagline: "Skills",
-    primaryColor: 'cyan',
+    primaryColor: 'green',
     secondaryColor: 'pink',
     gradientColor: "yellow-pink",
     // selectionColor: "orange",

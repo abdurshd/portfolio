@@ -6,7 +6,7 @@ import { Post, PostMain, PostContent, PostContainer } from "../components/Post";
 import { Wrapper } from '../components/Wrapper'
 
 export default function Blogpost({ children }) {
-  const { title, image, date } = children.props;
+  const { title, image, date, contentHtml } = children?.props || {};
 
   return (
     <Wrapper>
@@ -33,7 +33,7 @@ export default function Blogpost({ children }) {
           }}
         >
           <PostContainer>
-            {!image && (
+            {!image && title && (
               <div>
                 <PostContentTitle>{title}</PostContentTitle>
                 <PostContentSubtitle>
@@ -41,8 +41,7 @@ export default function Blogpost({ children }) {
                 </PostContentSubtitle>
               </div>
             )}
-
-            {children}
+            {contentHtml && <div dangerouslySetInnerHTML={{ __html: contentHtml }} />}
           </PostContainer>
         </PostContent>
       </Main>
