@@ -97,8 +97,8 @@ function Skills(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.tech/skills" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech/skills" />
+        <meta content="https://abdurashid.com/skills" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.com/skills" />
       </Head>
 
       <p dangerouslySetInnerHTML={{ __html: description }} />
@@ -196,8 +196,8 @@ export default Skills;
 //         <meta content={title} property="og:title" />
 //         <meta content={stripHtml(description)} name="description" />
 //         <meta content={stripHtml(description)} property="og:description" />
-//         <meta content="https://abdurashid.tech/articles" property="og:url" />
-//         <link rel="cannonical" href="https://abdurashid.tech/articles" />
+//         <meta content="https://abdurashid.com/articles" property="og:url" />
+//         <link rel="cannonical" href="https://abdurashid.com/articles" />
 //       </Head>
 
 //       <AnimateSharedLayout>

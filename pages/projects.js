@@ -7,6 +7,7 @@ import FeaturedProject from "../components/FeaturedProject";
 import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from "../lib/strip-html";
 import items from "../data/projects";
+import Link from 'next/link'
 
 
 export async function getStaticProps() {
@@ -58,21 +59,36 @@ function Projects(props) {
 
   function ProjectsDetailed(props) {
     const {project, index} = props;
-    return (
-      <Article href={project.url}>
-        <Animation index={index}>
-          <Container>
+    
+    const href = project.id ? `/projects/${project.id}` : project.url;
+    
+    const content = (
+      <Animation index={index}>
+        <Container>
           <ImageContainer css={{ backgroundImage: `url(${project.image})` }} />
-            <Content>
-              <Title>{project.title}</Title>
-              <Description>{project.description}</Description>
-              <Description>{project.overallExpl}</Description>
-              <Description>{project.usedSkillsExpl}</Description>
-            </Content>
-          </Container>
-        </Animation>
+          <Content>
+            <Title>{project.title}</Title>
+            <Description>{project.description}</Description>
+            <Description>{project.overallExpl}</Description>
+            <Description>{project.usedSkillsExpl}</Description>
+          </Content>
+        </Container>
+      </Animation>
+    );
+
+    return project.id ? (
+      <Article>
+        <Link href={href} passHref>
+          <a style={{ textDecoration: 'none', color: 'inherit' }}>
+            {content}
+          </a>
+        </Link>
       </Article>
-    )
+    ) : (
+      <Article href={href} target="_blank">
+        {content}
+      </Article>
+    );
   }
   
 function Animation(props) {
@@ -119,8 +135,8 @@ function Animation(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.tech/projects" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech/projects" />
+        <meta content="https://abdurashid.com/projects" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.com/projects" />
       </Head>
 
       <AnimateSharedLayout>

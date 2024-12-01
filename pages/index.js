@@ -31,8 +31,8 @@ function Index(props) {
         <meta content={title} property="og:title" />
         <meta content={seoDescription} name="description" />
         <meta content={seoDescription} property="og:description" />
-        <meta content="https://abdurashid.tech" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech" />
+        <meta content="https://abdurashid.com" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.com" />
       </Head>
 
       <Navbar />

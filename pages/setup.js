@@ -57,8 +57,8 @@ function Setup(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://abdurashid.tech/setup" property="og:url" />
-        <link rel="cannonical" href="https://abdurashid.tech/setup" />
+        <meta content="https://abdurashid.com/setup" property="og:url" />
+        <link rel="cannonical" href="https://abdurashid.com/setup" />
       </Head>
 
       <p dangerouslySetInnerHTML={{ __html: description }} />

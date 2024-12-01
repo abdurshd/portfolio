@@ -40,7 +40,7 @@ const skillCategories = [
           },
           {
             projectTitle: `This portfolio (next v12)`,
-            projectUrl: 'https://abdurashid.tech',
+            projectUrl: 'https://abdurashid.com',
           },
         ],
       },
