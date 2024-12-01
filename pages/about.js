@@ -45,7 +45,7 @@ function About(props) {
               width="256"
               height="336"
               placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
+              blurDataURL='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVR4nHXKsU4CQRDG8X0o7LATS7ATSrEUS8FSbMFSKIVSfBsIctx5t+zmJnO7s7vwCGYODJJo8ct/km/E13xeUat5JV0szv6jVquKUFFUZelyea7WP9YHyxJEUVXkaXqh4rim4s9LFcd/gjSuiTzL6gySpAEZyxo6Sa64e0mjyLK6QKWucymbKGUTpGyx4gCkbKHWTSZQ5zeodbu02dyi1idsrttW67YweX5nNHQMQAe1vjcMYE+Xd7kJQvNAiF0D0GMEyH0kxF4JoOcRu/z4RIh9QtMnwGfCU96YPhOuKAausAOLZugMs0NC88LdM8Ng7UB4615dYUfB2pEzdhyY/c2NmAjk3zz5yZb8xFuabhkdeaLpjvxEbF14Dz7MSuQ/Sv5oF8Js58PsGw4Hk62m9H16AAAAAElFTkSuQmCC'
               priority
               />
           </Section>
