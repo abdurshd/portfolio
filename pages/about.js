@@ -37,14 +37,7 @@ function About(props) {
 
   const renderAll = () => {
     return (
-      <div style={{
-        display: 'flex', 
-        gap: "100px",
-        flexDirection: 'column',
-        '@bp2': {
-          flexDirection: 'row'
-        }
-      }}>
+      <div style={{display: 'flex', gap: "100px"}}>
           <Section>
             <Image
               alt="Abdurashid"
