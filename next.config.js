@@ -1,6 +1,4 @@
-import createMDX from '@next/mdx';
-
-const withMDX = createMDX({
+const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
@@ -8,6 +6,6 @@ const withMDX = createMDX({
   },
 });
 
-export default withMDX({
+module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
 });
