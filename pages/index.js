@@ -48,7 +48,7 @@ function Index(props) {
                 animationDuration={800}
                 show
                 >
-                <strong>React developer</strong><br />
+                <strong>Full Stack Developer</strong><br />
                 </RoughNotation>
                 <RoughNotation
                 type="underline"
