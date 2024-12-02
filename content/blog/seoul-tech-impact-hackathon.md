@@ -2,14 +2,14 @@
 title: "Second Place at Seoul Tech Impact Hackathon 2024"
 description: "Our team's journey building Safe Nest, a web application for confidential child abuse reporting, which won second place among 25 teams at Seoul Tech Impact Hackathon."
 date: "2024-09-08"
-image: "/static/images/hack.png"
+image: "https://i.ibb.co/k86c1PJ/hack.png"
 readingTime: "4 min read"
 tags: ["Hackathon", "Next.js", "NextUI", "Social Impact", "Full Stack"]
 ---
 
 # Second Place at Seoul Tech Impact Hackathon 2024
 
-![Seoul Tech Impact Hackathon](/static/images/hack.png)
+![Seoul Tech Impact Hackathon](https://i.ibb.co/k86c1PJ/hack.png)
 *Seoul Tech Impact Hackathon 2024 in Pangyo*
 
 ## The Event

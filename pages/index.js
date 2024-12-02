@@ -64,7 +64,7 @@ function Index(props) {
           </PostContainer>
         </PostContent>
           <Image 
-            src="/static/img/posts/giphy.gif" 
+            src="https://i.ibb.co/g7tLxMc/giphy.gif" 
             alt='loading gif' 
             width={500} 
             height={500} 

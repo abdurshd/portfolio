@@ -10,7 +10,7 @@ const items = [
         icon: "star",
         overallExpl: 'Comprehensive restaurant management platform with QR code menu system and real-time order tracking',
         usedSkillsExpl: 'Built with React, TypeScript, Material-UI, Redux Toolkit, Node.js, Express, PostgreSQL, and AWS infrastructure',
-        image: '/static/images/mizan.png',
+        image: 'https://i.ibb.co/vHTt4Qm/mizan.png',
         private: true
       },
     ],
@@ -26,7 +26,7 @@ const items = [
         icon: "shield",
         overallExpl: 'Privacy-focused platform for children to safely report abuse, featuring AI-powered support and end-to-end encryption',
         usedSkillsExpl: 'Built with Next.js, NextUI, OpenAI API, Vercel Postgres, and TypeScript',
-        image: '/static/images/safenest.png'
+        image: 'https://i.ibb.co/r3yFbS7/safenest.png'
       }
     ]
   },
@@ -57,7 +57,7 @@ const items = [
         icon: "star",
         overallExpl: 'It is a Next.js web app as a personal portfolio',
         usedSkillsExpl: 'For this project Next.JS, Next SEO, Kbar, React Rough Notation, framer-motion and other small tools have been used.',
-        image: '/static/images/portfel.png',
+        image: 'https://i.ibb.co/stj5nb4/portfel.png',
         deployedLink: 'https://abdurashid.com'
       },
     ],

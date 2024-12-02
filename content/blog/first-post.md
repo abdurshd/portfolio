@@ -2,14 +2,14 @@
 title: "Simplify Form Handling in React with React Hook Form"
 description: "React Hook Form is a game-changer when it comes to handling forms in React applications. Learn how it simplifies form state management, improves performance, and reduces boilerplate code."
 date: "2024-05-14"
-image: "/image/reactHF.webp"
+image: "https://i.ibb.co/dffRG7X/reactHF.webp"
 readingTime: "4 min read"
 tags: ["React", "React Hook Form", "Frontend Development", "Web Development"]
 ---
 
 # Simplify Form Handling in React with React Hook Form
 
-![React Hook Form Screenshot](/blog/reactHF.webp)
+![React Hook Form Screenshot](https://i.ibb.co/dffRG7X/reactHF.webp)
 *Screenshot from React Hook Form's official website*
 
 React Hook Form is a game-changer when it comes to handling forms in React applications. It simplifies form state management, improves performance, provides declarative validation, enables flexible integration, and reduces boilerplate code. By leveraging React Hook Form, you can create reusable form components, streamline your development process, and deliver a better user experience.

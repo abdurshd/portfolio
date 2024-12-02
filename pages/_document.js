@@ -25,7 +25,7 @@ export default class extends Document {
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
 
-          <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
+          <link rel="icon" href="https://i.ibb.co/Qk780tM/favicon.png" sizes="any" type="image/png" />
           <link rel="alternate" type="application/rss+xml" href="https://abdurashid.com/rss/feed.xml"/>
           <link rel="alternate" type="application/atom+xml" href="https://abdurashid.com/rss/atom.xml" />
           <link rel="alternate" type="application/feed+json" href="https://abdurashid.com/rss/feed.json" />

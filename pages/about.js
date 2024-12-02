@@ -41,7 +41,7 @@ function About(props) {
           <Section>
             <Image
               alt="Abdurashid"
-              src="/static/images/ricky.jpg"
+              src="https://i.ibb.co/Qjq3GWV/ricky.png"
               width="256"
               height="336"
               placeholder="blur"

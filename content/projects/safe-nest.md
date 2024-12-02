@@ -3,7 +3,7 @@ title: "Safe Nest"
 description: "A confidential child abuse reporting platform that won second place at Seoul Tech Impact Hackathon 2024"
 date: "2024-09"
 tech: ["Next.js", "NextUI", "OpenAI", "Vercel Postgres", "TypeScript"]
-image: "/static/images/hack.png"
+image: "https://i.ibb.co/k86c1PJ/hack.png"
 ---
 
 # Safe Nest: Child Protection Platform

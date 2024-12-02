@@ -2,14 +2,14 @@
 title: "A Step-by-Step Guide to Building Reusable Components with React Hook Form"
 description: "Learn how to create reusable form components using React Hook Form for better developer experience and maintainable code."
 date: "2024-05-14"
-image: "/blog/RHF.webp"
+image: "https://i.ibb.co/sCw9yy1/RHF.webp"
 readingTime: "4 min read"
 tags: ["React Hook Form", "React", "Frontend Development", "Web Development"]
 ---
 
 # A Step-by-Step Guide to Building Reusable Components with React Hook Form
 
-![React Hook Form Components](/blog/RHF.webp)
+![React Hook Form Components](https://i.ibb.co/sCw9yy1/RHF.webp)
 
 [React Hook Form](https://react-hook-form.com/) is a powerful library that simplifies form handling in React applications. By creating reusable form components, you can streamline your development process and ensure consistency across your forms. Last time I explained why [using react hook form is a good idea](https://www.abdurashid.com/blog/first-post) in form handlings and gives you best developer experience. I do not think it is difficult to find how to install and add to your project since there are lots of other tutorials as well. Therefore this time, I'll try to explain how to use React Hook Form in React by creating reusable components as there is no enough explanations about it.
 
