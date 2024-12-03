@@ -7,6 +7,7 @@ import { PostMain, PostContent, PostContainer } from '../../components/Post'
 import { Wrapper } from '../../components/Wrapper'
 import { MDXRemote } from 'next-mdx-remote'
 import CodeBlock from '../../components/CodeBlock'
+import { useFloatingButton } from '../../hooks/useFloatingButton'
 
 export async function getStaticPaths() {
   const paths = getAllBlogIds()
@@ -51,6 +52,8 @@ const components = {
 }
 
 export default function BlogPost({ blogData }) {
+  const { FloatingButton } = useFloatingButton()
+  
   return (
     <Wrapper>
       <Head>
@@ -70,6 +73,7 @@ export default function BlogPost({ blogData }) {
             <MDXRemote {...blogData.mdxSource} components={components} />
           </PostContainer>
         </PostContent>
+        <FloatingButton path="/blog" buttonText="Back to Blog" />
       </PostMain>
       <Footer />
     </Wrapper>

@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import { PostMain, PostContent, PostContainer } from '../../components/Post'
 import { Wrapper } from '../../components/Wrapper'
+import { useFloatingButton } from '../../hooks/useFloatingButton'
 
 export async function getStaticPaths() {
   const paths = getAllProjectIds()
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log('Building page for:', params.id)
+
   const projectData = await getProjectData(params.id)
   return {
     props: {
@@ -77,6 +78,8 @@ const ProjectLinks = styled('div', {
 })
 
 export default function Project({ projectData }) {
+  const { FloatingButton } = useFloatingButton()
+  
   return (
     <Wrapper>
       <Head>
@@ -118,6 +121,7 @@ export default function Project({ projectData }) {
             <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
           </PostContainer>
         </PostContent>
+        <FloatingButton path="/projects" buttonText="Back to Projects" />
       </PostMain>
       <Footer />
     </Wrapper>
