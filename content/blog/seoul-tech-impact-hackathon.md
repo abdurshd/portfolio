@@ -1,5 +1,5 @@
 ---
-title: "Second Place at Seoul Tech Impact Hackathon 2024"
+# title: "Second Place at Seoul Tech Impact Hackathon 2024"
 description: "Our team's journey building Safe Nest, a web application for confidential child abuse reporting, which won second place among 25 teams at Seoul Tech Impact Hackathon."
 date: "2024-09-08"
 image: "https://i.ibb.co/k86c1PJ/hack.png"

@@ -1,5 +1,5 @@
 ---
-title: "A Step-by-Step Guide to Building Reusable Components with React Hook Form"
+# title: "A Step-by-Step Guide to Building Reusable Components with React Hook Form"
 description: "Learn how to create reusable form components using React Hook Form for better developer experience and maintainable code."
 date: "2024-05-14"
 image: "https://i.ibb.co/sCw9yy1/RHF.webp"

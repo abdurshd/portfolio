@@ -1,5 +1,5 @@
 ---
-title: "Simplify Form Handling in React with React Hook Form"
+# title: "Simplify Form Handling in React with React Hook Form"
 description: "React Hook Form is a game-changer when it comes to handling forms in React applications. Learn how it simplifies form state management, improves performance, and reduces boilerplate code."
 date: "2024-05-14"
 image: "https://i.ibb.co/dffRG7X/reactHF.webp"
