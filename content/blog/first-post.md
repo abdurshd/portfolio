@@ -1,13 +1,11 @@
 ---
-# title: "Simplify Form Handling in React with React Hook Form"
+title: "Simplify Form Handling in React with React Hook Form"
 description: "React Hook Form is a game-changer when it comes to handling forms in React applications. Learn how it simplifies form state management, improves performance, and reduces boilerplate code."
 date: "2024-05-14"
 image: "https://i.ibb.co/dffRG7X/reactHF.webp"
 readingTime: "4 min read"
 tags: ["React", "React Hook Form", "Frontend Development", "Web Development"]
 ---
-
-# Simplify Form Handling in React with React Hook Form
 
 ![React Hook Form Screenshot](https://i.ibb.co/dffRG7X/reactHF.webp)
 *Screenshot from React Hook Form's official website*
@@ -40,7 +38,6 @@ function MyForm() {
 }
 ```
 
-
 In this example, React Hook Form automatically manages the form state. By using the register function, the form fields are registered with the form, and their values are tracked automatically. The handleSubmit function handles the form submission and provides the form data to the onSubmit callback.
 
 ## 2. Efficient Re-renders
@@ -67,7 +64,6 @@ function MyForm() {
   );
 }
 ```
-
 
 In this example, when the form fields are updated, only those specific fields are re-rendered. The ExpensiveComponent, which may have costly rendering logic, remains untouched and is not unnecessarily re-rendered. React Hook Form optimizes the rendering process, improving the overall performance of the form.
 

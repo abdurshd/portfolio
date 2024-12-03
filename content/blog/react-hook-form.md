@@ -1,5 +1,5 @@
 ---
-# title: "A Step-by-Step Guide to Building Reusable Components with React Hook Form"
+title: "A Step-by-Step Guide to Building Reusable Components with React Hook Form"
 description: "Learn how to create reusable form components using React Hook Form for better developer experience and maintainable code."
 date: "2024-05-14"
 image: "https://i.ibb.co/sCw9yy1/RHF.webp"
@@ -7,15 +7,13 @@ readingTime: "4 min read"
 tags: ["React Hook Form", "React", "Frontend Development", "Web Development"]
 ---
 
-# A Step-by-Step Guide to Building Reusable Components with React Hook Form
-
 ![React Hook Form Components](https://i.ibb.co/sCw9yy1/RHF.webp)
 
 [React Hook Form](https://react-hook-form.com/) is a powerful library that simplifies form handling in React applications. By creating reusable form components, you can streamline your development process and ensure consistency across your forms. Last time I explained why [using react hook form is a good idea](https://www.abdurashid.com/blog/first-post) in form handlings and gives you best developer experience. I do not think it is difficult to find how to install and add to your project since there are lots of other tutorials as well. Therefore this time, I'll try to explain how to use React Hook Form in React by creating reusable components as there is no enough explanations about it.
 
 ## Step 1: Setting up the FormProvider
 
-To use React Hook Form, you need to wrap your form components with the FormProvider component. This allows your form components to access the form context and register their fields with the form. 
+To use React Hook Form, you need to wrap your form components with the FormProvider component. This allows your form components to access the form context and register their fields with the form.
 
 ```jsx
 import { FormProvider } from 'react-hook-form';
@@ -54,7 +52,6 @@ function InputField({ name, label, type, required, ...rest }) {
   );
 }
 ```
-
 
 ## Step 3: Using the Reusable Input Component
 
@@ -164,6 +161,7 @@ const validateEmail = (value) => {
 The other benefits of react hook form it supports not only text inputs, but all other forms of inputs like radio buttons, checkboxes, file input. And it can be used with much more advanced cases with controlled and uncontrolled components. If necessary I might write in the next post about more specific and advanced uses cases as well. Let me know in the comments.
 
 ## Tags
+
 - React Hook Form
 - React
 - Front End Web Development

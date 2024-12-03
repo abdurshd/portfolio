@@ -1,13 +1,11 @@
 ---
-# title: "Second Place at Seoul Tech Impact Hackathon 2024"
+title: "Second Place at Seoul Tech Impact Hackathon 2024"
 description: "Our team's journey building Safe Nest, a web application for confidential child abuse reporting, which won second place among 25 teams at Seoul Tech Impact Hackathon."
 date: "2024-09-08"
 image: "https://i.ibb.co/k86c1PJ/hack.png"
 readingTime: "4 min read"
 tags: ["Hackathon", "Next.js", "NextUI", "Social Impact", "Full Stack"]
 ---
-
-# Second Place at Seoul Tech Impact Hackathon 2024
 
 ![Seoul Tech Impact Hackathon](https://i.ibb.co/k86c1PJ/hack.png)
 *Seoul Tech Impact Hackathon 2024 in Pangyo*
@@ -29,6 +27,7 @@ Our team developed Safe Nest, a web application designed to provide a safe, conf
 ### Technical Implementation
 
 We built Safe Nest as a full-stack application using:
+
 - Frontend: Next.js with NextUI for a responsive, accessible interface
 - Backend: Vercel Postgres for secure data management
 - AI Integration: OpenAI API for intelligent response handling
@@ -37,6 +36,7 @@ We built Safe Nest as a full-stack application using:
 ### Team Collaboration
 
 Our success was a result of effective collaboration among team members:
+
 - Frontend Development (My role): User interface and experience design
 - Backend & System Design: Nicolas Miannay
 - Project Setup & Database: Sebin Hong
@@ -44,6 +44,7 @@ Our success was a result of effective collaboration among team members:
 ## Impact and Future Plans
 
 While winning second place was exciting, our team's focus remains on the potential real-world impact of Safe Nest. We're committed to continuing development, with plans to:
+
 - Enhance security features
 - Expand language support
 - Partner with child protection organizations
@@ -58,9 +59,10 @@ The hackathon's success was made possible by the dedicated organizers, including
 The Seoul Tech Impact Hackathon was more than just a competition—it was a demonstration of how technology can be harnessed for social good. Our team's success with Safe Nest reinforces the importance of creating solutions that address real societal challenges, and we're excited to continue developing this project to make a lasting impact on child safety.
 
 ## Tags
+
 - Hackathon
 - Social Impact
 - Next.js
 - Full Stack Development
 - Child Safety
-- Web Development 
+- Web Development
