@@ -36,11 +36,11 @@ export function useFloatingButton() {
     >
       <RoughNotation
         type="circle"
-        show={isHovered}
+        show
         color="var(--colors-primary)"
         strokeWidth={2}
         padding={8}
-        animationDuration={300}
+        animationDuration={2000}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px' }}>
           <i className="ri-arrow-left-line" />

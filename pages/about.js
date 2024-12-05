@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
   const meta = {
     title: "About | Abdurashid Akbarov",
-    description: "Hi, I'm Abdurashid...",
+    description: "Hi, I'm Abdurashid, a software engineer with a passion for building products that help people live better lives.",
     tagline: "About me",
     primaryColor: "cyan",
     secondaryColor: "purple",
@@ -37,7 +37,14 @@ function About(props) {
 
   const renderAll = () => {
     return (
-      <div style={{display: 'flex', gap: "100px"}}>
+      <div style={{
+        display: 'flex', 
+        gap: "100px",
+        flexDirection: 'row',
+        '@media (max-width: 768px)': {
+          flexDirection: 'column'
+        }
+      }}>
           <Section>
             <Image
               alt="Abdurashid"
