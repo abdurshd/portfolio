@@ -37,49 +37,49 @@ function About(props) {
 
   const renderAll = () => {
     return (
-      <div style={{display: 'flex', gap: "100px"}}>
-          <Section>
-            <Image
-              alt="Abdurashid"
-              src="https://i.ibb.co/Qjq3GWV/ricky.png"
-              width="256"
-              height="336"
-              placeholder="blur"
-              blurDataURL='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVR4nHXKsU4CQRDG8X0o7LATS7ATSrEUS8FSbMFSKIVSfBsIctx5t+zmJnO7s7vwCGYODJJo8ct/km/E13xeUat5JV0szv6jVquKUFFUZelyea7WP9YHyxJEUVXkaXqh4rim4s9LFcd/gjSuiTzL6gySpAEZyxo6Sa64e0mjyLK6QKWucymbKGUTpGyx4gCkbKHWTSZQ5zeodbu02dyi1idsrttW67YweX5nNHQMQAe1vjcMYE+Xd7kJQvNAiF0D0GMEyH0kxF4JoOcRu/z4RIh9QtMnwGfCU96YPhOuKAausAOLZugMs0NC88LdM8Ng7UB4615dYUfB2pEzdhyY/c2NmAjk3zz5yZb8xFuabhkdeaLpjvxEbF14Dz7MSuQ/Sv5oF8Js58PsGw4Hk62m9H16AAAAAElFTkSuQmCC'
-              priority
-              />
-          </Section>
-          <div style={{ marginBottom: 40 }} >
-            <h2>Career</h2>
-            {items.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <h3>{item.jobTitle}</h3>
-                  <p style={{ margin: 0 }}>
-                    <a href={item.companyUrl} target="_blank">
-                      {item.company}
-                    </a>
-                    <span> • {item.location}</span>
-                  </p>
-                  <p style={{ margin: 0 }}>
-                    <span>{format(parseISO(item.startDate), "LLL yyyy")}</span>
-                    <span> – </span>
-                    <span>
-                      {item.endDate
-                        ? format(parseISO(item.endDate), "LLL yyyy")
-                        : "Present"}
-                    </span>
-                    <span> • </span>
-                    <span>{getDuration(item.startDate, item.endDate)}</span>
-                  </p>
-                </React.Fragment>
-                )
-              })}
-            <p style={{marginBottom: 0}}> More information about my education, career and </p>
-            <p style={{margin: 0}}>certificates can be seen on my <a href='https://www.linkedin.com/in/abdurshd'>LinkedIn</a></p>
-          </div>
-        </div>
-      );
+      <ContentWrapper>
+        <ImageSection>
+          <Image
+            alt="Abdurashid"
+            src="https://i.ibb.co/Qjq3GWV/ricky.png"
+            width="256"
+            height="336"
+            placeholder="blur"
+            blurDataURL='data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVR4nHXKsU4CQRDG8X0o7LATS7ATSrEUS8FSbMFSKIVSfBsIctx5t+zmJnO7s7vwCGYODJJo8ct/km/E13xeUat5JV0szv6jVquKUFFUZelyea7WP9YHyxJEUVXkaXqh4rim4s9LFcd/gjSuiTzL6gySpAEZyxo6Sa64e0mjyLK6QKWucymbKGUTpGyx4gCkbKHWTSZQ5zeodbu02dyi1idsrttW67YweX5nNHQMQAe1vjcMYE+Xd7kJQvNAiF0D0GMEyH0kxF4JoOcRu/z4RIh9QtMnwGfCU96YPhOuKAausAOLZugMs0NC88LdM8Ng7UB4615dYUfB2pEzdhyY/c2NmAjk3zz5yZb8xFuabhkdeaLpjvxEbF14Dz7MSuQ/Sv5oF8Js58PsGw4Hk62m9H16AAAAAElFTkSuQmCC'
+            priority
+          />
+        </ImageSection>
+        <TextSection>
+          <h2>Career</h2>
+          {items.map((item, index) => {
+            return (
+              <React.Fragment key={index}>
+                <h3>{item.jobTitle}</h3>
+                <p style={{ margin: 0 }}>
+                  <a href={item.companyUrl} target="_blank">
+                    {item.company}
+                  </a>
+                  <span> • {item.location}</span>
+                </p>
+                <p style={{ margin: 0 }}>
+                  <span>{format(parseISO(item.startDate), "LLL yyyy")}</span>
+                  <span> – </span>
+                  <span>
+                    {item.endDate
+                      ? format(parseISO(item.endDate), "LLL yyyy")
+                      : "Present"}
+                  </span>
+                  <span> • </span>
+                  <span>{getDuration(item.startDate, item.endDate)}</span>
+                </p>
+              </React.Fragment>
+            )
+          })}
+          <p style={{marginBottom: 0}}>More information about my education, career and</p>
+          <p style={{margin: 0}}>certificates can be seen on my <a href='https://www.linkedin.com/in/abdurshd'>LinkedIn</a></p>
+        </TextSection>
+      </ContentWrapper>
+    );
   };
 
   const getDuration = (startDate, endDate) => {
@@ -121,15 +121,51 @@ function About(props) {
   );
 }
 
-const Section = styled("div", {
-  marginTop: "0px",
-  width: "auto",
+const ContentWrapper = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '40px',
+  marginBottom: '40px',
+  padding: '0 20px',
+  alignItems: 'center',
+  textAlign: 'center',
+  
+  '@bp2': {
+    flexDirection: 'row',
+    gap: '100px',
+    padding: 0,
+    alignItems: 'flex-start',
+    textAlign: 'left',
+  }
+});
+
+const ImageSection = styled('div', {
+  flexShrink: 0, // Prevents the image section from shrinking
+  width: '256px', // Fixed width matching your Image component
+});
+
+const TextSection = styled('div', {
+  flex: 1,
+  
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  
+  '@bp2': {
+    alignItems: 'flex-start',
+  }
 });
 
 const MarkdownContent = styled('div', {
   maxWidth: '760px',
   margin: '40px auto 0',
   padding: '0 20px',
+  textAlign: 'center',
+  
+  '@bp2': {
+    padding: 0,
+    textAlign: 'left',
+  },
   
   '& h1': {
     fontSize: '2em',
