@@ -134,7 +134,7 @@ const ContentWrapper = styled('div', {
     flexDirection: 'row',
     gap: '100px',
     padding: 0,
-    alignItems: 'flex-start',
+    alignItems: 'center',
     textAlign: 'left',
   }
 });
