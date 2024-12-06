@@ -9,15 +9,19 @@ export default function ListItem(props) {
   if (props.href.charAt(0) === '/') {
     return (
       <ArticleItem>
-        <Link href={props.href} passHref>
-          <Anchor>
-            <Animation index={props.index}>
-              <Title>{props.title}</Title>
-              <Date>
-                <BlogDate dateString={props.date} />
-              </Date>
-            </Animation>
-          </Anchor>
+        <Link 
+          href={props.href}
+          style={{
+            textDecoration: 'none',
+            color: 'inherit'
+          }}
+        >
+          <Animation index={props.index}>
+            <Title>{props.title}</Title>
+            <Date>
+              <BlogDate dateString={props.date} />
+            </Date>
+          </Animation>
         </Link>
       </ArticleItem>
     )

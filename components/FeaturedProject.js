@@ -11,29 +11,50 @@ const FeaturedProjectIcon = styled("div", {
 export default function FeaturedProject(props) {
   const { project } = props;
   
-  // If project has an id, it means it has a details page
-  const ProjectWrapper = project.id ? Link : 'a';
-  const projectProps = project.id 
-    ? { href: `/projects/${project.id}` }
-    : { href: project.url, target: "_blank" };
+  const content = (
+    <Project>
+      <Animation index={props.index}>
+        <FeaturedProjectIcon>
+          <i className={`ri-${project.icon}-line`} />
+        </FeaturedProjectIcon>
+        <Body>
+          <Title>{project.title}</Title>
+          <Description>{project.description}</Description>
+          <Stats>{project.stats}</Stats>
+        </Body>
+      </Animation>
+    </Project>
+  );
+
+  if (project.id) {
+    return (
+      <Link 
+        href={`/projects/${project.id}`}
+        style={{
+          textDecoration: 'none',
+          color: 'inherit'
+        }}
+      >
+        {content}
+      </Link>
+    );
+  }
 
   return (
-    <ProjectWrapper {...projectProps}>
-      <Project>
-        <Animation index={props.index}>
-          <FeaturedProjectIcon>
-            <i className={`ri-${project.icon}-line`} />
-          </FeaturedProjectIcon>
-          <Body>
-            <Title>{project.title}</Title>
-            <Description>{project.description}</Description>
-            <Stats>{project.stats}</Stats>
-          </Body>
-        </Animation>
-      </Project>
-    </ProjectWrapper>
+    <ExternalLink 
+      href={project.url} 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {content}
+    </ExternalLink>
   );
 }
+
+const ExternalLink = styled('a', {
+  textDecoration: 'none',
+  color: 'inherit'
+});
 
 function Animation(props) {
   const [hovered, setHovered] = useState("");
@@ -59,10 +80,9 @@ function Animation(props) {
   );
 }
 
-const Project = styled("a", {
+const Project = styled("div", {
   display: "flex",
   transition: "opacity $duration ease-in-out",
-  border: "0",
   borderRadius: "$borderRadius",
   textDecoration: "none",
   width: "auto",

@@ -60,8 +60,6 @@ function Projects(props) {
   function ProjectsDetailed(props) {
     const {project, index} = props;
     
-    const href = project.id ? `/projects/${project.id}` : project.url;
-    
     const content = (
       <Animation index={index}>
         <Container>
@@ -76,18 +74,28 @@ function Projects(props) {
       </Animation>
     );
 
-    return project.id ? (
-      <Article>
-        <Link href={href} passHref>
-          <a style={{ textDecoration: 'none', color: 'inherit' }}>
-            {content}
-          </a>
+    if (project.id) {
+      return (
+        <Link 
+          href={`/projects/${project.id}`}
+          style={{ 
+            textDecoration: 'none', 
+            color: 'inherit' 
+          }}
+        >
+          {content}
         </Link>
-      </Article>
-    ) : (
-      <Article href={href} target="_blank">
+      );
+    }
+
+    return (
+      <ExternalLink 
+        href={project.url} 
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {content}
-      </Article>
+      </ExternalLink>
     );
   }
   
@@ -152,14 +160,15 @@ function Animation(props) {
   );
 }
 
-const Article = styled('a', {
+const ExternalLink = styled('a', {
+  textDecoration: 'none',
+  color: 'inherit',
   border: '0 !important',
   width: '370px',
   margin: '5px',
-  textDecoration: 'none',
   '&:hover': { opacity: 1 },
   '&:first-child': { marginLeft: 0 },
-})
+});
 
 const Container = styled('div', {
   display: 'flex',
