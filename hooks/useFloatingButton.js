@@ -36,7 +36,7 @@ export function useFloatingButton() {
     >
       <RoughNotation
         type="circle"
-        show={isHovered}
+        show
         color="var(--colors-primary)"
         strokeWidth={2}
         padding={8}

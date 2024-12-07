@@ -54,33 +54,34 @@ function Skills(props) {
                     dangerouslySetInnerHTML={{ __html: item.description }}
                     />
                   )}
-                  {item.projects && skillCategories.indexOf(category) === 0? 
-                  (
-                  <>
-                  <p>{`Projects that are used ${item.title}`} </p>
-                  <ul>
-                    {item.projects.map((project, jIndex) => {
-                      return (
-                        <>
-                        <li key={jIndex}>
-                          <a href={project.projectUrl} target="_blank"
-                           onMouseEnter={() => setIsHovered(project.projectTitle)}
-                           onMouseLeave={() => setIsHovered('')}
-                           >
-                            <RoughNotation type="box" show={isHovered === project.projectTitle}>
-                            {project.projectTitle}
-                            </RoughNotation>
-                          </a>
-                        </li>
-                        {item.projects.indexOf(project) === item.projects.length-1 && <br/>}
-                        </>
-                      );
-                    })}
-                  </ul>
-                  </>
-                  ) :
-                  (null)
-                  }
+                  {item.projects ? (
+                    <>
+                      <p>{`Projects that use ${item.title}`} </p>
+                      <ul>
+                        {item.projects.map((project, jIndex) => {
+                          if (!project.projectUrl) return (
+                            <li key={jIndex}>
+                              <p>{project.projectTitle}</p>
+                            </li>
+                          );
+                          return (
+                            <li key={jIndex}>
+                              <a
+                                href={project.projectUrl}
+                                target="_blank"
+                                onMouseEnter={() => setIsHovered(project.projectTitle)}
+                                onMouseLeave={() => setIsHovered('')}
+                              >
+                                <RoughNotation type="highlight" show={isHovered === project.projectTitle}>
+                                  {project.projectTitle}
+                                </RoughNotation>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </>
+                  ) : null}
                 </li>
               );
             })}
