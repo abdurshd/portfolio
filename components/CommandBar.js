@@ -28,7 +28,7 @@ export default function CommandBar(props) {
     {
       id: "about",
       name: "About",
-      shortcut: ["g", "a", "b"],
+      shortcut: ["g", "a"],
       keywords: "go-about",
       section: "Go To",
       perform: () => router.push("/about"),
@@ -37,7 +37,7 @@ export default function CommandBar(props) {
     {
       id: "skills",
       name: "Skills",
-      shortcut: ["g", "a", "r"],
+      shortcut: ["g", "s"],
       keywords: "go-skills",
       section: "Go To",
       perform: () => router.push("/skills"),
@@ -64,7 +64,7 @@ export default function CommandBar(props) {
     {
       id: "setup",
       name: "Setup",
-      shortcut: ["g", "s"],
+      shortcut: ["g", "c"],
       keywords: "go-setup",
       section: "Go To",
       perform: () => router.push("/setup"),
@@ -109,13 +109,6 @@ export default function CommandBar(props) {
           "_blank"
         ),
       icon: <i className="ri-linkedin-line" style={iconStyle} />,
-    },
-    {
-      id: "blog",
-      name: "Blog",
-      shortcut: ["b"],
-      keywords: "blog articles posts writing",
-      perform: () => router.push("/blog"),
     },
   ];
 

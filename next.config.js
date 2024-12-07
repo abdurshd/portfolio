@@ -11,4 +11,14 @@ module.exports = withMDX({
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: '/:path*',
+          destination: '/404',
+        },
+      ],
+    }
+  },
 });

@@ -91,12 +91,18 @@ function About(props) {
     let durationStr = "";
 
     if (durationObj.years > 1) {
-      durationStr = `${durationObj.years} yrs `;
+      durationStr = `${durationObj.years} years `;
     } else if (durationObj.years === 1) {
-      durationStr = `${durationObj.years} yr `;
+      durationStr = `${durationObj.years} year `;
     }
 
-    durationStr += `${durationObj.months} mos`;
+    if (durationObj.months > 1) {
+      durationStr += `${durationObj.months} months`;
+    } else if (durationObj.months === 1) {
+      durationStr += `${durationObj.months} month`;
+    } else if (durationObj.months === 0) {
+      durationStr;
+    }
 
     return durationStr;
   };
