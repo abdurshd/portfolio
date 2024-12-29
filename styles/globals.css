@@ -47,3 +47,7 @@ code {
 .token.inserted {
   color: #85e89d;
 } 
+
+html {
+  scroll-behavior: smooth;
+}

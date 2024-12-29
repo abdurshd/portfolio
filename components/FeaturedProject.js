@@ -25,9 +25,16 @@ export default function FeaturedProject(props) {
             <i className={`ri-${project.icon}-line`} />
           </FeaturedProjectIcon>
           <Body>
-            <Title>{project.title}</Title>
-            <Description>{project.description}</Description>
-            <Stats>{project.stats}</Stats>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: props.index * 0.1 }}
+            >
+              <Title>{project.title}</Title>
+              <Description>{project.description}</Description>
+              <Stats>{project.stats}</Stats>
+            </motion.div>
           </Body>
         </Animation>
       </Project>

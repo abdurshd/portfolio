@@ -38,7 +38,7 @@ function Projects(props) {
       })
       .flat()
       .map((item, index) => {
-        return <FeaturedProject key={index} project={item} />;
+        return <FeaturedProject key={index} project={item} index={index} />;
       });
   };
 
@@ -49,7 +49,7 @@ function Projects(props) {
           <h3>{item.year}</h3>
           <ul style={{ margin: 0, paddingLeft: 0 }}>
             {item.projects.map((project, pIndex) => {
-              return <ProjectsDetailed key={pIndex} project={project} />;
+              return <ProjectsDetailed key={pIndex} project={project} index={pIndex}/>;
             })}
           </ul>
         </div>
@@ -78,16 +78,30 @@ function Projects(props) {
 
     return project.id ? (
       <Article>
-        <Link href={href} passHref>
-          <a style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link href={href} passHref>
+        <a style={{ textDecoration: 'none', color: 'inherit' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
             {content}
-          </a>
-        </Link>
-      </Article>
+          </motion.div>
+        </a>
+      </Link>
+    </Article>
     ) : (
       <Article href={href} target="_blank">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
         {content}
-      </Article>
+      </motion.div>
+    </Article>
     );
   }
   
