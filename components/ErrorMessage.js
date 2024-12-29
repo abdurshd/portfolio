@@ -1,7 +1,6 @@
 import ShortcutError from "./ShortcutError";
 import { Box } from './Box'
 import { styled } from '../stitches.config'
-import Image from 'next/image'
 
 const ErrorContainer = styled(Box, {
   textAlign: 'center',

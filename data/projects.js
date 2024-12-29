@@ -16,6 +16,22 @@ const items = [
     ],
   },
   {
+    year: "2023.12 - 2024.12",
+    projects: [
+      {
+        id: "lgu-connect",
+        title: "LGU+ Connect",
+        description: "Smart vehicle management solution with real-time tracking and analytics",
+        url: "",  // Since it's private
+        icon: "dashboard-line",
+        overallExpl: 'Enterprise-level vehicle management platform featuring real-time tracking, analytics, and comprehensive fleet management capabilities',
+        usedSkillsExpl: 'Built with React, TypeScript, Apollo Client, Recoil, iNavi Maps API, React Hook Form, ApexCharts, and Ag-Grid',
+        image: 'https://i.ibb.co/310zwBg/Screenshot-2024-12-29-at-17-06-24.png',
+        private: true
+      }
+    ]
+  },
+  {
     year: "2024.09",
     projects: [
       {

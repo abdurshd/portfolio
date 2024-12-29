@@ -12,7 +12,7 @@ const items = [
     company: "Freelancer",
     companyUrl: "",
     startDate: "2022-11-17",
-    endDate: "2023-12-02",
+    endDate: "2023-10-19",
     location: "remote",
   },
 
