@@ -62,15 +62,6 @@ export default function CommandBar(props) {
       icon: <i className="ri-lightbulb-line" style={iconStyle} />,
     },
     {
-      id: "setup",
-      name: "Setup",
-      shortcut: ["g", "c"],
-      keywords: "go-setup",
-      section: "Go To",
-      perform: () => router.push("/setup"),
-      icon: <i className="ri-computer-line" style={iconStyle} />,
-    },
-    {
       id: "copy",
       name: "Copy URL",
       shortcut: ["u"],
