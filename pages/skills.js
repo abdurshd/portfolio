@@ -5,6 +5,7 @@ import stripHtml from "../lib/strip-html";
 import skillCategories from "../data/skills";
 import Link from "next/link";
 import { RoughNotation } from "react-rough-notation";
+import ParticleBackground from "../components/ParticleBackground";
 
 
 export async function getStaticProps() {

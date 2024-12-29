@@ -5,6 +5,7 @@ import { getAllBlogPosts } from "../lib/mdx";
 import Link from "next/link";
 import stripHtml from "../lib/strip-html";
 import Main from "../layouts/Main";
+import ParticleBackground from "../components/ParticleBackground";
 
 export async function getStaticProps() {
   const blogPosts = getAllBlogPosts();
@@ -61,6 +62,7 @@ function Blog(props) {
       </Head>
 
       <BlogList>
+
         {blogPosts.map((post) => (
           <BlogItem key={post.id}>
             <BlogLink href={`/blog/${post.id}`}>

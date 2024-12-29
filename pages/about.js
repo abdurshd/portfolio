@@ -10,6 +10,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import fs from 'fs';
 import path from 'path';
+import ParticleBackground from "../components/ParticleBackground";
 
 export async function getStaticProps() {
   const fullPath = path.join(process.cwd(), 'content/about.md');
@@ -117,6 +118,7 @@ function About(props) {
         <meta content="https://abdurashid.com/about" property="og:url" />
         <link rel="cannonical" href="https://abdurashid.com/about" />
       </Head>
+
 
       {renderAll()}
       <br/>

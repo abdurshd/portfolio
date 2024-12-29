@@ -6,6 +6,7 @@ import Footer from "../../components/Footer"
 import { PostMain, PostContent, PostContainer } from '../../components/Post'
 import { Wrapper } from '../../components/Wrapper'
 import { useFloatingButton } from '../../hooks/useFloatingButton'
+import ParticleBackground from '../../components/ParticleBackground'
 
 export async function getStaticPaths() {
   const paths = getAllProjectIds()
@@ -86,6 +87,7 @@ export default function Project({ projectData }) {
         <title>{projectData.title}</title>
         <meta name="description" content={projectData.description} />
       </Head>
+      <ParticleBackground />
       <Navbar />
       <PostMain>
         <PostContent>

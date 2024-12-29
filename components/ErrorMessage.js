@@ -1,6 +1,7 @@
 import ShortcutError from "./ShortcutError";
 import { Box } from './Box'
 import { styled } from '../stitches.config'
+import ParticleBackground from "./ParticleBackground";
 
 const ErrorContainer = styled(Box, {
   textAlign: 'center',
@@ -32,6 +33,7 @@ export default function ErrorMessage({ code }) {
 
   return (
     <ErrorContainer>
+      <ParticleBackground />
       <ErrorTitle>{title}</ErrorTitle>
       <ErrorDescription>{description}</ErrorDescription>
       <ShortcutError />
