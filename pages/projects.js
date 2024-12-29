@@ -8,6 +8,8 @@ import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from "../lib/strip-html";
 import items from "../data/projects";
 import Link from 'next/link'
+import GradientBackground from '../components/GradientBackground';
+import ParticleBackground from '../components/ParticleBackground';
 
 
 export async function getStaticProps() {
@@ -143,7 +145,7 @@ function Animation(props) {
   const description = `On this page you can find <strong>${getTotalProjects()} different</strong> open source apps and libraries I have built or contributed to over the course of my career starting with udemy/codecademy projects.`;
 
   return (
-    <div className="single">
+    <div className="projects-section">
       <Head>
         <title>{title}</title>
         <meta content={title} property="og:title" />
@@ -155,12 +157,13 @@ function Animation(props) {
 
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
-
+        {/* <GradientBackground /> */}
+        <ParticleBackground />
         <h2>Featured Projects</h2>
         <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
         <h2>All Projects</h2>
-          {renderAll()}
+        {renderAll()}
       </AnimateSharedLayout>
     </div>
   );
