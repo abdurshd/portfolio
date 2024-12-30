@@ -9,6 +9,7 @@ import stripHtml from "../lib/strip-html";
 import items from "../data/projects";
 import Link from 'next/link'
 import ParticleBackground from "../components/ParticleBackground";
+import ThreeDFlipCard from "../components/3DFlipCard";
 export async function getStaticProps() {
     const meta = {
         title: "Projects | Abdurashid Abarov",
@@ -40,6 +41,7 @@ function Projects(props) {
     const renderAll = () => {
         return items.map((item, index) => {
             return (
+              // <ThreeDFlipCard key={index}>
                 <div key={index}>
                     <h3>{item.year}</h3>
                     <ul style={{ margin: 0, paddingLeft: 0 }}>
@@ -48,6 +50,7 @@ function Projects(props) {
                         })}
                     </ul>
                 </div>
+              // </ThreeDFlipCard>
             );
         });
     };
@@ -75,7 +78,9 @@ function Projects(props) {
         const content = (
             <Animation index={index}>
                 <Container>
-                    <ImageContainer css={{ backgroundImage: `url(${project.image})` }} />
+                    <ThreeDFlipCard>
+                      <ImageContainer css={{ backgroundImage: `url(${project.image})` }} />
+                    </ThreeDFlipCard>
                     <Content>
                         <Title>{project.title}</Title>
                         <Description>{project.description}</Description>
@@ -153,6 +158,7 @@ function Projects(props) {
 
             <AnimateSharedLayout>    <p dangerouslySetInnerHTML={{ __html: description }} />
                 <ParticleBackground />
+                
                 <h2>Featured Projects</h2>
                 <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
@@ -179,7 +185,9 @@ const ImageContainer = styled('div', {
     borderRadius: '8px',
     width: '370px',
     height: '180px',
-    margin: "55px 5px",
+    // margin: "55px 5px",
+    alignItems: "center",
+    alignSelf: "center",
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
