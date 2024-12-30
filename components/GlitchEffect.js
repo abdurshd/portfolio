@@ -1,15 +1,47 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
-function GlitchEffect({ children }) {
+function GlitchEffect({ children, primaryColor = "#fff", secondaryColor = "#0073e6" }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [currentColor, setCurrentColor] = useState(primaryColor);
+
+  useEffect(() => {
+    let interval;
+    if (isHovered) {
+      interval = setInterval(() => {
+        setCurrentColor(prev => 
+          prev === primaryColor ? secondaryColor : primaryColor
+        );
+      }, 1000);
+    } else {
+      setCurrentColor(primaryColor);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isHovered, primaryColor, secondaryColor]);
+
   return (
     <motion.div
-      whileHover={{
-        scale: 1.1,
-        rotate: [0, -2, 2, -2, 2, 0],
-        transition: { duration: 0.5 },
+      style={{
+        cursor: "pointer",
+        position: "relative",
       }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
     >
-      {children}
+      <motion.div
+        animate={{
+          color: currentColor,
+          textShadow: isHovered 
+            ? `0 0 10px ${currentColor}, 0 0 20px ${currentColor}, 0 0 30px ${currentColor}`
+            : "none",
+          transition: { duration: 0.3 }
+        }}
+      >
+        {children}
+      </motion.div>
     </motion.div>
   );
 }

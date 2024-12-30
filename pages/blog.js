@@ -5,7 +5,7 @@ import { getAllBlogPosts } from "../lib/mdx";
 import Link from "next/link";
 import stripHtml from "../lib/strip-html";
 import Main from "../layouts/Main";
-import ParticleBackground from "../components/ParticleBackground";
+import GlitchEffect from "../components/GlitchEffect";
 
 export async function getStaticProps() {
   const blogPosts = getAllBlogPosts();
@@ -66,7 +66,9 @@ function Blog(props) {
         {blogPosts.map((post) => (
           <BlogItem key={post.id}>
             <BlogLink href={`/blog/${post.id}`}>
-              {post.title}
+              <GlitchEffect>
+                {post.title}
+              </GlitchEffect>
             </BlogLink>
           </BlogItem>
         ))}
