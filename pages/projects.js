@@ -179,6 +179,9 @@ const Article = styled('a', {
 const Container = styled('div', {
     display: 'flex',
     flexDirection: 'column',
+    backgroundColor: "rgba(64, 64, 64, 0.9)",
+    borderRadius: "8px",
+    padding: "20px",
     '@bp2': { flexDirection: 'row-reverse' },
 })
 const ImageContainer = styled('div', {
