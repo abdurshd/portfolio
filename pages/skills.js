@@ -73,7 +73,7 @@ function Skills(props) {
                                 onMouseEnter={() => setIsHovered(project.projectTitle)}
                                 onMouseLeave={() => setIsHovered('')}
                               >
-                                <RoughNotation type="highlight" show={isHovered === project.projectTitle}>
+                                <RoughNotation type="box" color="lime" show={isHovered === project.projectTitle}>
                                   {project.projectTitle}
                                 </RoughNotation>
                               </a>

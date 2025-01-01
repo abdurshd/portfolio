@@ -4,10 +4,19 @@ import Footer from "../components/Footer";
 import { Wrapper } from "../components/Wrapper";
 import { PostMain, PostContent, PostContainer } from '../components/Post'
 import { RoughNotation } from "react-rough-notation";
-
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 export default function Main({ children }) {
   const { title, tagline, primaryColor, secondaryColor } = children.props
+
+  const router = useRouter();
+  const [key, setKey] = useState(0);
+
+    // Reset the key when route changes to force re-render of RoughNotation
+    useEffect(() => {
+      setKey(prev => prev + 1);
+    }, [router.asPath]);
 
   return (
     <Wrapper>
@@ -33,8 +42,12 @@ export default function Main({ children }) {
               }}
             >
               <RoughNotation
-                type="underline"
+                key={key}
+                type="box"
                 color="white"
+                padding={8}
+                iterations={2}
+                animationDuration={2000}
                 show
                 >
               {tagline ? tagline : title}

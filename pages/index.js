@@ -42,7 +42,7 @@ function Index(props) {
               <h1>{title}</h1>
               <p>
               <RoughNotation
-                type="circle"
+                type="box"
                 color="cyan"
                 padding={10}
                 animationDuration={800}
@@ -50,14 +50,9 @@ function Index(props) {
                 >
                 <strong>Full Stack Developer</strong><br />
                 </RoughNotation>
-                <RoughNotation
-                type="underline"
-                color="grey"
-                animationDuration={2800}
-                show
-                >
+                {/* <p> */}
                 {description}
-                </RoughNotation>
+                {/* </p> */}
               </p>
               <ShortcutHome />
             </div>
